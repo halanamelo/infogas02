@@ -3,7 +3,7 @@ Exercício de Informática - Grupo 02
 
 - Um motorista irá fazer uma viagem e fará N paradas para abastecimento no caminho. Ele planeja sair pela manhã e chegar antes da meia-noite (24h).
 
--O carro, assume-se, sai da garagem com o tanque cheio. O motorista anotará a hora e minuto do início da viagem, e o odômetro (kilometros atuais). E também anotará a distância total da viagem.
+O carro, assume-se, sai da garagem com o tanque cheio. O motorista anotará a hora e minuto do início da viagem, e o odômetro (kilometros atuais). E também anotará a distância total da viagem.
 
 - Em cada parada, ele olhará para seu relógio de pulso e anotará (entrada no programa) a hora e o minuto. Em seguida ele olhará para o painel e anotará o valor total do odômetro atual (marca quantos kilometros desde que o carro era "zero"). Em seguida olhará para a bomba de gasolina e anotará quantos litros foi colocado no tanque. SÃO AS INFORMAÇÕES SUFICIENTES E NECESSÁRIAS, NADA A MAIS, NADA A MENOS, a cada parada.
 
