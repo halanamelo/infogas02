@@ -4,19 +4,34 @@
 int main(void)
 {
         // Variáveis //
-    float l, h, k, p,km_atual, f, g, t, a;
-    int y, m;
+    float l, k, p,km_atual, f, hora2, t, a;
+    int y, minutos, hora;
         // Entrada de dados //                    
-    printf ("Saida as hh:mm : \n ");
-    scanf ("%f", &h);         
+    printf ("Informe a hora de saida: \n ");
+    scanf ("%f", &hora);
+    printf("E os minutos \n");
+    scanf("%d", &minutos);
     printf ("Informe a kilometragem atual: \n ");
     scanf ("%f", &k);                          
     printf ("Informe a capacidade do tanque: \n ");
     scanf ("%f", &l);
-    printf ("Previsao de hora de chegada ao destino hh:mm: \n ");
-    scanf ("%f", &g);
+    printf ("Previsao de hora de chegada ao destino: \n ");
+    scanf ("%f", &hora2);
+    printf("d", minutos2);
     printf ("Inserir dados da parada de abastecimento! \n");
     
+        // Conversão de horas em minutos //
+   
+   if (hora>=0)
+   {
+       convminutos=hora*60;
+       horatotal=convhora+minutos;
+       convhora=horatotal/60;
+
+   }
+
+        // Laço para quantidade de paradas //
+
    while (m<n)
    {
        printf ("Informe a hora da parada em hh:mm : \n ");
@@ -25,7 +40,7 @@ int main(void)
        scanf ("%f", &km_atual);                                                      
        printf ("Informe a quantidade de litros atual de combustivel: \n ");
        scanf ("%f", &t);
-       f=(y-k)/(p-h);
+       f=(y-k)/(p-hora);
        printf ("Velocidade media entre paradas: \n ", "%f");
        printf ("Consumo parcial: %f \n ", (l-t) );
        printf("Previsão hora de chegada: %f \n ", a-(p-h) );
