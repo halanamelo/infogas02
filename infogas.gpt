@@ -1,3 +1,11 @@
+algoritmo_infogas02
+variáveis
+    variavel1 : real;
+    variavel2 : real;
+    variavel3 : real;
+    variavel4 : real;
+fim-variáveis
+
 início
-    variáveis 
-fim    
+
+fim   
