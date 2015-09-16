@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+algoritmo_infogas02
+variáveis
+    variavel1 : real;
+    variavel2 : real;
+    variavel3 : real;
+    variavel4 : real;
+fim-variáveis
+
+início
+
+fim   
+=======
 algortmo_infogas;
 
 variáveis
@@ -23,3 +36,4 @@ início
     imprima ("Digite a distância total da viagem (km)?");
     dt := leia();
 fim
+>>>>>>> 20bb22244c8b3edae717602ee263839048bc77b3

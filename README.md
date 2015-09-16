@@ -5,13 +5,13 @@ Vinícius Lins de Sá: vico_vlds@hotmail.com
 
 Renan Goldberg Bezerra
 
-Aron Sales de Melo de Medeiros Monteiro
+Aron Sales de Melo de Medeiros Monteiro: aronmonteiro@gmail.com
 
-Halana Thais Silva Bezerra de Melo
+Halana Thais Silva Bezerra de Melo: halanatmelo@gmail.com
 
 Lucas Marinho Gila: lucasmgila@gmail.com
 
-Matheus Morais Moura
+Matheus Morais Moura: matheusmorais_14@hotmail.com
 
 Bruna Mayumi Hori: brunahori19@gmail.com
 
