@@ -31,7 +31,12 @@ Início
     imprima ("Digite a distancia total da viagem");
     dt:= leia();
 
-***********FAZER 1 = INICIAR O LOOP AQUI, ALGUEM FAÇA ISSO PFVR*****************************************************
+***********FAZER 1 = INICIAR O LOOP AQUI, ALGUEM FAÇA ISSO PFVR****************************************************
+ 
+              EXEMPLO DO LOOP (PRECISA ADC AS VARIAVEIS E ORGANIZAR)
+              para<variavel> de <valor inicial da variavel> ate <valor limite> {opcional passo <de quanto em quanto>] faca
+              <instrução>
+              fimpara
 
         imprima ("Digite a hora");
         h:=leia();
