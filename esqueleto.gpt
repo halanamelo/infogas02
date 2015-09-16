@@ -10,7 +10,7 @@ variáveis
     g : real; [ litros de gasolina abastecidos na parada];
     vm : real;  [ velocidade media por trecho];
     cc : real;  [ consumo de combustivel, dado por km/litro];
-    pc : real;  [ previsão de chegada, ainda não fiz a formula(eu tentei fazer*aron*)];
+    pc : real;  [ previsão de chegada, dado por h+(vm/q)];
     dt : real;  [ distancia pecorrida total];
     t : real;  [ capacidade do tanque de combustivel em litros];
     tt : real; [ quantidade restante de gasolina no tanque de combustivel ];
@@ -40,7 +40,7 @@ Início
         imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
         g:=leia();
         cc = (qi-q/g-gt);
-        pc = (h*qi/dt);
+        pc = (h+(vm/q));
         imprima ("ULTIMO ABASTECIMENTO ? (S,N):);
 ************ SE A RESPOSTA FOR SIM, ACABAR COM O LOOP E IMPRIMIR O RELATORIO FINAL, PESQUISEM SOBRE ISSO*******************************************
 
