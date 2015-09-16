@@ -1,25 +1,42 @@
 algoritmo_infogas;
 variáveis
-    a : real;  [ hora]
-    b : real;  [ minuto]
-    c : real;  [ quilometragem , ou, odometrro]
-    d : real;  [ litros de gasolina abastecido]
-    e : real;  [ velocidade media por trecho]
-    f : real;  [ consumo de combustivel, dado por km/litro, ou b/c]
-    g : real;  [ previsão de chegada, ainda não fiz a formula]
-    h : real;  [ distancia pecorrida final ou total]
-    i : real;  [ capacidade do tanque]
+    hi : real;  [ hora de saida]
+    h : real; [hora em cada trecho]
+    m : real;  [ minuto]
+    q : real;  [ quilometragem inicial]
+    qt : real; [ quilometragem percorrida em cada trecho ]
+    g : real;  [ litros de gasolina abastecido]
+    gt : real; [ litros de gasolina após a parada] 
+    vm : real;  [ velocidade media por trecho]
+    cc : real;  [ consumo de combustivel, dado por km/litro, ou b/c]
+    pc : real;  [ previsão de chegada, ainda não fiz a formula]
+    dt : real;  [ distancia pecorrida final ou total]
+    t : real;  [ capacidade do tanque]
 fim-variáveis
 
 Início
     imprima ("Digite a hora");
-    a:= leia();
-    imprima ("Digite a quilometragem");
-    b:= leia();
+    hi:= leia();
+    imprima ("Digite a quilometragem inicial");
+    q:= leia();
+    imprima ("Capacidade total do tanque da galosina");
+    i:=leia();
     imprima (" Digite quantos litros de gasolina foram colocados no tanque");  
-    c:= leia();
-    d:= (b/a);
-    e:= (km/l, ou, b/c);
-    imprima ("Digite qual a distancia pecorrida ate o final do trecho");
     g:= leia();
+    imprima ("Digite a distancia total da viagem");
+    dt:= leia();
+
+************ ESSE TRECHO ABAIXO É PRA SE REPETIR EM UM LOOP, A CADA PARADA ************************************************************
+
+        imprima ("Digite a hora");
+        h:=leia();
+        imprima ("Quilometragem percorrida");
+        qt:=leia();
+        vm = (qt-q/hi-h);
+        imprima ("Digite quantos litros de gasolina foram colocados nesta parada");
+        gt:=leia();
+        cc = (qt-q/g-gt);
+        pc = (h*qt/dt);
+        imprima ("ULTIMO ABASTECIMENTO ? (S,N):);
+************ SE A RESPOSTA FOR SIM, ACABAR COM O LOOP E IMPRIMIR O RELATORIO FINAL, PESQUISEM SOBRE ISSO*******************************************
 Fim
