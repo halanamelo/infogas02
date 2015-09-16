@@ -19,7 +19,7 @@ Início
     hi:= leia();
     imprima ("Digite a quilometragem inicial");
     q:= leia();
-    imprima ("Capacidade total do tanque da galosina");
+    imprima ("Capacidade total do tanque da gasolina");
     i:=leia();
     imprima (" Digite quantos litros de gasolina foram colocados no tanque");  
     g:= leia();
@@ -39,4 +39,8 @@ Início
         pc = (h*qt/dt);
         imprima ("ULTIMO ABASTECIMENTO ? (S,N):);
 ************ SE A RESPOSTA FOR SIM, ACABAR COM O LOOP E IMPRIMIR O RELATORIO FINAL, PESQUISEM SOBRE ISSO*******************************************
+
+    imprima ("Relatorio final do percurso");
+
+#################3DEVERÁ CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.########################################
 Fim
