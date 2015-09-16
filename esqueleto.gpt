@@ -1,17 +1,47 @@
-algoritmo_infogas;
+algoritmo_infogas02;
 variáveis
-    a : real;  [ hora]
-    b : real;  [ quilometragem , ou, odometrro]
-    c : real;  [ litros de gasolina abastecido]
-    d : real;  [ velocidade media por trecho]
-    e : real;  [ consumo de combustivel, dado por km/litro, ou b/c]
-    f : real;  [ previsão de chegada, ainda não fiz a formula]
+    hi : real;  [ hora de saida];
+    h : real; [hora em cada parada];
+    mi : real;  [ minuto de saida];
+    m : real; [minuto em cada parada];
+    qi : real;  [ quilometragem inicial];
+    q : real; [ quilometragem percorrida em cada trecho ];
+    gi : real;  [ litros de gasolina iniciais];
+    g : real; [ litros de gasolina abastecidos na parada];
+    vm : real;  [ velocidade media por trecho];
+    cc : real;  [ consumo de combustivel, dado por km/litro];
+    pc : real;  [ previsão de chegada, ainda não fiz a formula(eu tentei fazer*aron*)];
+    dt : real;  [ distancia pecorrida total];
+    t : real;  [ capacidade do tanque de combustivel em litros];
 fim-variáveis
-    imprima ("Digite a hora");
-    a:= leia();
-    imprima ("Digite a quilometragem");
-    b:= leia();
-    imprima (" Digite quantos litros de gasolina foram colocados no tanque");    c:= leia();
-    d:= (b/a);
-    e:= (km/l, ou, b/c);
 
+Início
+    imprima ("Digite a hora");
+    hi:= leia();
+    imprima ("Digite a quilometragem inicial");
+    qi:= leia();
+    imprima ("Capacidade total em litros do tanque da gasolina");
+    t:=leia();
+    imprima (" Digite quantos litros de gasolina foram colocados no tanque");  
+    gi:= leia();
+    imprima ("Digite a distancia total da viagem");
+    dt:= leia();
+
+************ ESSE TRECHO ABAIXO É PRA SE REPETIR EM UM LOOP, A CADA PARADA,A EXEMPLO DO (WHILE) NO ARQUIVO c *****************************************************
+
+        imprima ("Digite a hora");
+        h:=leia();
+        imprima ("Quilometragem percorrida");
+        q:=leia();
+        vm = (q-qi/h-hi);
+        imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
+        g:=leia();
+        cc = (qt-q/g-gt);
+        pc = (h*qt/dt);
+        imprima ("ULTIMO ABASTECIMENTO ? (S,N):);
+************ SE A RESPOSTA FOR SIM, ACABAR COM O LOOP E IMPRIMIR O RELATORIO FINAL, PESQUISEM SOBRE ISSO*******************************************
+
+    imprima ("Relatorio final do percurso");
+
+#################DEVERÁ CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.########################################
+Fim
