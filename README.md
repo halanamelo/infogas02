@@ -3,7 +3,7 @@ Rafael Souto Campelo
 
 Vinícius Lins de Sá: vico_vlds@hotmail.com
 
-Renan Goldberg Bezerra
+Renan Goldberg Bezerra: Ainda não conseguimos contactar esse integrante do grupo.
 
 Aron Sales de Melo de Medeiros Monteiro: aronmonteiro@gmail.com
 
