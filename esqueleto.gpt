@@ -12,4 +12,6 @@ fim-variáveis
     imprima ("Digite a quilometragem");
     b:= leia();
     imprima (" Digite quantos litros de gasolina foram colocados no tanque");    c:= leia();
-    d : (b/a); 
+    d:= (b/a);
+    e:= (km/l, ou, b/c);
+
