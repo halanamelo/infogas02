@@ -1,28 +1,29 @@
 algoritmo_infogas02;
 variáveis
     hi : real;  [ hora de saida]
-    h : real; [hora em cada trecho]
-    m : real;  [ minuto]
-    q : real;  [ quilometragem inicial]
-    qt : real; [ quilometragem percorrida em cada trecho ]
-    g : real;  [ litros de gasolina abastecido]
-    gt : real; [ litros de gasolina após a parada] 
+    h : real; [hora em cada parada]
+    mi : real;  [ minuto de saida]
+    m : real; [minuto em cada parada]
+    qi : real;  [ quilometragem inicial]
+    q : real; [ quilometragem percorrida em cada trecho ]
+    gi : real;  [ litros de gasolina iniciais]
+    g : real; [ litros de gasolina abastecidos na parada] 
     vm : real;  [ velocidade media por trecho]
-    cc : real;  [ consumo de combustivel, dado por km/litro, ou b/c]
-    pc : real;  [ previsão de chegada, ainda não fiz a formula]
-    dt : real;  [ distancia pecorrida final ou total]
-    t : real;  [ capacidade do tanque]
+    cc : real;  [ consumo de combustivel, dado por km/litro]
+    pc : real;  [ previsão de chegada, ainda não fiz a formula(eu tentei fazer*aron*)]
+    dt : real;  [ distancia pecorrida total]
+    t : real;  [ capacidade do tanque de combustivel em litros]
 fim-variáveis
 
 Início
     imprima ("Digite a hora");
     hi:= leia();
     imprima ("Digite a quilometragem inicial");
-    q:= leia();
-    imprima ("Capacidade total do tanque da gasolina");
-    i:=leia();
+    qi:= leia();
+    imprima ("Capacidade total em litros do tanque da gasolina");
+    t:=leia();
     imprima (" Digite quantos litros de gasolina foram colocados no tanque");  
-    g:= leia();
+    gi:= leia();
     imprima ("Digite a distancia total da viagem");
     dt:= leia();
 
@@ -31,10 +32,10 @@ Início
         imprima ("Digite a hora");
         h:=leia();
         imprima ("Quilometragem percorrida");
-        qt:=leia();
-        vm = (qt-q/hi-h);
+        q:=leia();
+        vm = (q-qi/h-hi);
         imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
-        gt:=leia();
+        g:=leia();
         cc = (qt-q/g-gt);
         pc = (h*qt/dt);
         imprima ("ULTIMO ABASTECIMENTO ? (S,N):);
