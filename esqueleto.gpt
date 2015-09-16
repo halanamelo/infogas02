@@ -36,8 +36,8 @@ Início
         vm = (q-qi/h-hi);
         imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
         g:=leia();
-        cc = (qt-q/g-gt);
-        pc = (h*qt/dt);
+        cc = (qi-q/g-gt);
+        pc = (h*qi/dt);
         imprima ("ULTIMO ABASTECIMENTO ? (S,N):);
 ************ SE A RESPOSTA FOR SIM, ACABAR COM O LOOP E IMPRIMIR O RELATORIO FINAL, PESQUISEM SOBRE ISSO*******************************************
 
