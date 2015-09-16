@@ -14,7 +14,7 @@ int main(void)
     printf ("Informe a kilometragem atual: \n ");
     scanf ("%f", &k);                          
     printf ("Informe a capacidade do tanque: \n ");
-    scanf ("%f", &l);
+    scanf ("%f", &litros);
     printf ("Previsao de hora de chegada ao destino: \n ");
     scanf ("%f", &hora2);
     printf("d", minutos2);
