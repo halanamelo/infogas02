@@ -13,6 +13,7 @@ variáveis
     pc : real;  [ previsão de chegada, ainda não fiz a formula(eu tentei fazer*aron*)];
     dt : real;  [ distancia pecorrida total];
     t : real;  [ capacidade do tanque de combustivel em litros];
+    tt : real; [ quantidade restante de gasolina no tanque de combustivel ];
 fim-variáveis
 
 Início
@@ -22,6 +23,8 @@ Início
     qi:= leia();
     imprima ("Capacidade total em litros do tanque da gasolina");
     t:=leia();
+    imprima ("Quantidade restante de gasolina em litros);
+    tt:=leia();
     imprima (" Digite quantos litros de gasolina foram colocados no tanque");  
     gi:= leia();
     imprima ("Digite a distancia total da viagem");
