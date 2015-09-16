@@ -1,12 +1,14 @@
 algoritmo_infogas;
 variáveis
     a : real;  [ hora]
-    b : real;  [ quilometragem , ou, odometrro]
-    c : real;  [ litros de gasolina abastecido]
-    d : real;  [ velocidade media por trecho]
-    e : real;  [ consumo de combustivel, dado por km/litro, ou b/c]
-    f : real;  [ previsão de chegada, ainda não fiz a formula]
-    g : real;  [ distancia pecorrida em todo o trajeto ]
+    b : real;  [ minuto]
+    c : real;  [ quilometragem , ou, odometrro]
+    d : real;  [ litros de gasolina abastecido]
+    e : real;  [ velocidade media por trecho]
+    f : real;  [ consumo de combustivel, dado por km/litro, ou b/c]
+    g : real;  [ previsão de chegada, ainda não fiz a formula]
+    h : real;  [ distancia pecorrida final ou total]
+    i : real;  [ capacidade do tanque]
 fim-variáveis
 
 Início
