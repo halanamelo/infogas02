@@ -1,3 +1,24 @@
+# AUTORES
+Rafael Souto Campelo
+
+Vinícius Lins de Sá: vico_vlds@hotmail.com
+
+Renan Goldberg Bezerra: Ainda não conseguimos contactar esse integrante do grupo.
+
+Aron Sales de Melo de Medeiros Monteiro: aronmonteiro@gmail.com
+
+Halana Thais Silva Bezerra de Melo: halanatmelo@gmail.com
+
+Lucas Marinho Gila: lucasmgila@gmail.com
+
+Matheus Morais Moura: matheusmorais_14@hotmail.com
+
+Bruna Mayumi Hori: brunahori19@gmail.com
+
+Dennis Miller Fidelis da Silva: dmiler.f10@gmail.com
+
+Priscila de Sousa Silva: cila_007@hotmail.com
+
 # infogas02
 Exercício de Informática - Grupo 02
 

@@ -1,0 +1,28 @@
+algoritmo_infogas
+
+
+********************** TRABALHAR NO ARQUIVO ESQUELETO.GPT, SÓ IREMOS MUDAR PARA O INFOGAS02.GPT NO FINAL DO TRABALHO.*************************
+
+variáveis
+
+    t : real;
+    hi : inteiro;
+    mi : inteiro;
+    oi : real;
+    ha : inteiro;
+    ma : inteiro;
+    oa : real;
+    pvd : real;
+    d : real;
+    vlp : real;
+    vmt : real;
+    cp : real;
+    dt : real;
+    /* sendo t=tanque, hi=hora inicial, mi=minuto inicial, oi= odomentro inicial, ha=hora atual, ma=minuto atual, oa= odometro atual, d=distancia, dt=distancia total, vlp=velocidade parcial, vmt=velocidade media total, cp=consumo de combustivel parcial, pvd= previsao de chegada */
+
+fim-varáveis
+
+início
+    imprima ("Digite a distância total da viagem (km)?");
+    dt := leia();
+fim
