@@ -4,7 +4,7 @@
 int main(void)
 {
         // Variáveis //
-    float litros, km_saida, hora_parada, km_atual, vm, hora2, litros_abastecidos, a;
+    float litros, km_saida, hora_parada, km_atual, vm, hora2, litros_abastecidos, hora_chegada;
     int y, minutos, hora;
         // Entrada de dados //                    
     printf ("Informe a hora de saida: \n ");
