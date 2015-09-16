@@ -3,10 +3,10 @@
 
 int main(void)
 {
-        // Variáveis //
+        /* Variáveis */
     float litros, km_saida, hora_parada, km_atual, vm, hora2, litros_abastecidos, hora_chegada;
     int y, minutos, hora;
-        // Entrada de dados //                    
+        /* Entrada de dados */                    
     printf ("Informe a hora de saida: \n ");
     scanf ("%f", &hora);
     printf("E os minutos \n");
@@ -20,7 +20,7 @@ int main(void)
     printf("d", minutos2);
     printf ("Inserir dados da parada de abastecimento! \n");
     
-        // Conversão de horas em minutos //
+        /* Conversão de horas em minutos */
    
    if (hora>=0)
    {
@@ -30,7 +30,7 @@ int main(void)
 
    }
 
-        // Laço para quantidade de paradas //
+        /* Laço para quantidade de paradas */
 
    while (m<n)
    {
@@ -44,7 +44,7 @@ int main(void)
        printf ("Velocidade media entre paradas: \n ", "%f");
        printf ("Consumo parcial: %f \n ", (l-t) );
        printf("Previsão hora de chegada: %f \n ", a-(p-h) );
-       printf("Ultima parada? y (pressione  1) n (pressione 2);
+       printf("Ultima parada? sim (pressione  1) nao (pressione 2);
        scanf ("%d", &y);
            if ( y==1)
            { 
