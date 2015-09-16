@@ -27,7 +27,7 @@ Início
     imprima ("Digite a distancia total da viagem");
     dt:= leia();
 
-************ ESSE TRECHO ABAIXO É PRA SE REPETIR EM UM LOOP, A CADA PARADA ************************************************************
+************ ESSE TRECHO ABAIXO É PRA SE REPETIR EM UM LOOP, A CADA PARADA,A EXEMPLO DO (WHILE) NO ARQUIVO c *****************************************************
 
         imprima ("Digite a hora");
         h:=leia();
