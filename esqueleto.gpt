@@ -1,15 +1,15 @@
 algoritmo_infogas;
 variáveis
     a : real;  [ hora]
-    b : real;  [ kilometragem , ou, odometrro]
+    b : real;  [ quilometragem , ou, odometrro]
     c : real;  [ litros de gasolina abastecido]
     d : real;  [ velocidade media por trecho]
     e : real;  [ consumo de combustivel, dado por km/litro, ou b/c]
-    f : real;  [ previsao de chegada, ainda n fiz a formula]
+    f : real;  [ previsão de chegada, ainda não fiz a formula]
 fim-variáveis
     imprima ("Digite a hora");
     a:= leia();
-    imprima ("Digite a kilometragem");
+    imprima ("Digite a quilometragem");
     b:= leia();
     imprima (" Digite quantos litros de gasolina foram colocados no tanque");    c:= leia();
     d : (b/a); 
