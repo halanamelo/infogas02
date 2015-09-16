@@ -17,7 +17,7 @@ Bruna Mayumi Hori: brunahori19@gmail.com
 
 Dennis Miller Fidelis da Silva
 
-Priscila de Sousa Silva
+Priscila de Sousa Silva: cila_007@hotmail.com
 
 # infogas02
 Exercício de Informática - Grupo 02
