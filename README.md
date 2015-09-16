@@ -5,7 +5,7 @@ Vinícius Lins de Sá: vico_vlds@hotmail.com
 
 Renan Goldberg Bezerra
 
-Aron Sales de Melo de Medeiros Monteiro
+Aron Sales de Melo de Medeiros Monteiro: aronmonteiro@gmail.com
 
 Halana Thais Silva Bezerra de Melo
 
