@@ -19,7 +19,7 @@ variáveis
     cp : real;
     dt : real;
     tt : real;
-    /* sendo t=tanque, hi=hora inicial, mi=minuto inicial, oi= odomentro inicial, ha=hora atual, ma=minuto atual, oa= odometro atual, d=distancia, dt=distancia total, vlp=velocidade parcial, vmt=velocidade media total, cp=consumo de combustivel parcial, pvd= previsao de chegada */
+    /* sendo t=tanque, hi=hora inicial, mi=minuto inicial, oi= odomentro inicial, ha=hora atual, ma=minuto atual, oa= odometro atual, d=distancia, dt=distancia total, vlp=velocidade parcial, vmt=velocidade media total, tt= quantidade restante de gasolina no tanque de combustível, cp=consumo de combustivel parcial, pvd= previsao de chegada */
 
 fim-varáveis
 
