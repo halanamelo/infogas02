@@ -11,5 +11,5 @@ fim-variáveis
     a:= leia();
     imprima ("Digite a kilometragem");
     b:= leia();
-    imprima ("Digite quantos litros de gasolina foram colocados no tanque");    c:= leia();
+    imprima (" Digite quantos litros de gasolina foram colocados no tanque");    c:= leia();
     d : (b/a); 
