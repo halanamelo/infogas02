@@ -1,5 +1,5 @@
 # AUTORES
-Rafael Souto Campelo
+Rafael Souto Campelo : rafael_campelo91@hotmail.com
 
 Vinícius Lins de Sá: vico_vlds@hotmail.com
 
