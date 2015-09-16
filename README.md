@@ -15,7 +15,7 @@ Matheus Morais Moura
 
 Bruna Mayumi Hori: brunahori19@gmail.com
 
-Dennis Miller Fidelis da Silva
+Dennis Miller Fidelis da Silva: dmiler.f10@gmail.com
 
 Priscila de Sousa Silva: cila_007@hotmail.com
 
