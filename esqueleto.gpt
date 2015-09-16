@@ -20,5 +20,4 @@ Início
     e:= (km/l, ou, b/c);
     imprima ("Digite qual a distancia pecorrida ate o final do trecho");
     g:= leia();
-
 Fim
