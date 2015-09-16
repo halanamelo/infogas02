@@ -17,6 +17,7 @@ variáveis
 fim-variáveis
 
 Início
+    imprima ("NOTA:escreva as horas e minutos em decimais, ex: 1:30min = 1,5h");
     imprima ("Digite a hora");
     hi:= leia();
     imprima ("Digite a quilometragem inicial");
