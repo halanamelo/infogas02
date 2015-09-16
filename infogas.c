@@ -12,7 +12,7 @@ int main(void)
     printf("E os minutos \n");
     scanf("%d", &minutos);
     printf ("Informe a kilometragem atual: \n ");
-    scanf ("%f", &km_saida);                          
+    scanf ("%f", &k);                          
     printf ("Informe a capacidade do tanque: \n ");
     scanf ("%f", &l);
     printf ("Previsao de hora de chegada ao destino: \n ");
