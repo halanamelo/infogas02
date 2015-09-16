@@ -1,4 +1,4 @@
-algoritmo_infogas;
+algoritmo_infogas02;
 variáveis
     hi : real;  [ hora de saida]
     h : real; [hora em cada trecho]
@@ -33,7 +33,7 @@ Início
         imprima ("Quilometragem percorrida");
         qt:=leia();
         vm = (qt-q/hi-h);
-        imprima ("Digite quantos litros de gasolina foram colocados nesta parada");
+        imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
         gt:=leia();
         cc = (qt-q/g-gt);
         pc = (h*qt/dt);
@@ -42,5 +42,5 @@ Início
 
     imprima ("Relatorio final do percurso");
 
-#################3DEVERÁ CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.########################################
+#################DEVERÁ CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.########################################
 Fim
