@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-algoritmo_infogas02
+algoritmo_infogas
 
 
-********************** TRABALHAR NO ARQUIVO ESQUELETO.GPT, SÓ IREMOS MUDAR PARA O INFOGAS02.GPT NO FINAL DO TRABALHO.**************************************
-
-
-variáveis
-    variavel1 : real;
-    variavel2 : real;
-    variavel3 : real;
-    variavel4 : real;
-fim-variáveis
-
-início
-
-fim   
-=======
-algortmo_infogas;
+********************** TRABALHAR NO ARQUIVO ESQUELETO.GPT, SÓ IREMOS MUDAR PARA O INFOGAS02.GPT NO FINAL DO TRABALHO.*************************
 
 variáveis
 
@@ -41,4 +26,3 @@ início
     imprima ("Digite a distância total da viagem (km)?");
     dt := leia();
 fim
->>>>>>> 20bb22244c8b3edae717602ee263839048bc77b3
