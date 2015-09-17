@@ -18,6 +18,7 @@ variáveis
     dt : real;
     t : real;
     tt : real;
+    tp : real;
     s : real;
     n : real;
     cc1 : real;
