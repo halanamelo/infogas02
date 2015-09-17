@@ -45,12 +45,11 @@ início
         tt:=leia();
         imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
         g:=leia();
-        vm = (q-qi/h-hi);
-        cc = (q-qi/g-gi);
-        pc = (h+(vm/q));
+        imprima ("velocidade media: vm = (q-qi/h-hi");
+        imprima ("consumo combustivel: cc = (q-qi/g-g'i");
+        imprima ("previsao de chegada: pc = (h+(vm/q)");
         imprima ("ULTIMO ABASTECIMENTO : PARA SIM DIGITE 101, PARA NAO DIGITE 100 (101,100):");
-        ate(101)
+        até(101);
     imprima ("Relatorio final do percurso");
 
-FAZER 3 - FAZER O RELATORIO FINAL ONDE DEVERA CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.
-Fim
+fim
