@@ -4,7 +4,7 @@ variáveis
     h : real; [hora em cada parada];
     mi : real;  [ minuto de saida];
     m : real; [minuto em cada parada];
-    qi : real;  [ quilometragem inicial];
+    qi : real; [ quilometragem inicial, odômetro];
     q : real; [ quilometragem percorrida em cada trecho ];
     gi : real;  [ litros de gasolina iniciais];
     g : real; [ litros de gasolina abastecidos na parada];
@@ -17,10 +17,11 @@ variáveis
 fim-variáveis
 
 Início
-    imprima ("NOTA:escreva as horas e minutos em decimais, ex: 1:30min = 1,5h");
     imprima ("Digite a hora");
     hi:= leia();
-    imprima ("Digite a quilometragem inicial");
+    imprima ("Digite os minutos");
+    mi:= leia();
+    imprima ("Digite a quilometragem inicial, odômetro");
     qi:= leia();
     imprima ("Capacidade total em litros do tanque da gasolina");
     t:=leia();
