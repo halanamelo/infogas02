@@ -22,8 +22,10 @@ variáveis
     s : real;
     n : real;
     cc1 : real;
+    prec1 : real;
+    previsao : real;
 fim-variáveis
- /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inical, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, pc: previsão de chegada, dt: distância total, t: , tt: , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
+ /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inicial, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, pc: previsão de chegada, dt: distância total, t: , tt: , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
 
 início
     imprima ("Digite a hora de saida:");
@@ -39,7 +41,7 @@ início
     imprima ("Digite a distancia total da viagem:");
     dt:= leia();
  
-             repita
+         
               
 
         imprima ("Digite a hora do abastecimento:");
@@ -63,12 +65,17 @@ início
         cc1 := (g-gi);
         cc := (dp/cc1);
         imprima ("consumo combustivel: ", cc, "km/l");
-        
-        
-
-        imprima ("previsao de chegada: pc = (h+vm/dp)");
+        dp := (q-qi);
+        hp := (h-hi);
+        mp := (m-mi);
+        mh := (mp/60);
+        tp := (hp+mh);
+        vm := (dp/tp);
+        prec1 := (dt-dp);
+        previsao := (prec1/vm);
+        imprima ("previsao de chegada: ", previsao, "horas");
         imprima ("ULTIMO ABASTECIMENTO : PARA SIM DIGITE 101, PARA NAO DIGITE 100 (101,100):");
-        até(101);
+        
     imprima ("Relatorio final do percurso");
 
 fim
