@@ -4,72 +4,71 @@
 int main(void)
 
 {
-<<<<<<< HEAD
 
     // Variáveis //
 
- float kmsaida, distancia, kmparada, vm, litroabastecido, hora_chegada, conthora=0, contminutos, litros, litrosabastecidos;
- int horasaida, minutossaida, horatotal, convminutos, convhora, y, m, n, horaparada, minutosparada;
- char parada='n';
+     float kmsaida, distancia, kmparada, vm, litroabastecido, hora_chegada, conthora=0, contminutos, litros, litrosabastecidos;
+     int horasaida, minutossaida, horatotal, convminutos, convhora, y, m, n, horaparada, minutosparada;
+     char parada='n';
 
- // Entrada de dados //
+   // Entrada de dados //
 
- printf ("Informe a hora de saida:\n");
- scanf ("%d", &horasaida);
+     printf ("Informe a hora de saida:\n");
+     scanf ("%d", &horasaida);
  
- printf("E os minutos?\n");
- scanf("%d", &minutossaida);
+     printf("E os minutos?\n");
+     scanf("%d", &minutossaida);
  
- printf ("Informe a kilometragem atual:\n");
- scanf ("%f", & kmsaida);
+     printf ("Informe a kilometragem atual:\n");
+     scanf ("%f", & kmsaida);
  
- printf ("Informe qual a distancia total ate o seu  destino:\n");
- scanf ("%f", &distancia);
+     printf ("Informe qual a distancia total ate o seu  destino:\n");
+     scanf ("%f", &distancia);
 
- printf ("Inserir dados da parada de abastecimento!\n");
+     printf ("Inserir dados da parada de abastecimento!\n");
  
  
- // Laço para quantidade de paradas //
+   // Laço para quantidade de paradas //
  
- while (parada!='s')
+     while (parada!='s')
  
  {
    
- printf ("Informe a hora da parada:\n");
- scanf ("%d", &horaparada);
+         printf ("Informe a hora da parada:\n");
+         scanf ("%d", &horaparada);
  
- printf ("E os minutos?\n");
- scanf ("%d", &minutosparada);
- printf ("Informe a kilometragem atual:\n");
- scanf ("%f", &kmparada);
+         printf ("E os minutos?\n");
+         scanf ("%d", &minutosparada);
+         printf ("Informe a kilometragem atual:\n");
+         scanf ("%f", &kmparada);
  
- printf ("Informe a quantidade de litros de combustivel abastecido:\n ");
- scanf ("%f", &litroabastecido);
+         printf ("Informe a quantidade de litros de combustivel abastecido:\n ");
+         scanf ("%f", &litroabastecido);
  
- vm=(kmparada-kmsaida)/(horaparada-horasaida);
+    vm=(kmparada-kmsaida)/(horaparada-horasaida);
  
- printf ("Velocidade media de %f entre paradas\n", vm);
+         printf ("Velocidade media de %f entre paradas\n", vm);
  
- printf ("Consumo parcial de combustivel: %f\n ", litroabastecido-litros);
+         printf ("Consumo parcial de combustivel: %f\n ", litroabastecido-litros);
  
  
- if (horasaida>=0)
+    if (horasaida>=0)
  
  {
  
- horasaida=horaparada;
- minutossaida=minutosparada;
- litros=litrosabastecidos;
- convminutos=horasaida*60;
- horatotal=convminutos+minutossaida;
- convhora=horatotal/60;
+             horasaida=horaparada;
+             minutossaida=minutosparada;
+             litros=litrosabastecidos;
+             convminutos=horasaida*60;
+             horatotal=convminutos+minutossaida;
+             convhora=horatotal/60;
  
- while (conthora<convhora)
+     while (conthora<convhora)
  {
- conthora++; 
+             conthora++; 
  }
  
- contminutos=(convhora-conthora)*60;
+             contminutos=(convhora-conthora)*60;
  
  }
  
