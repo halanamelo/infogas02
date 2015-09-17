@@ -1,24 +1,24 @@
-algoritmo_infogas02;
+algoritmo infogas02;
 variáveis
-    hi : real;  [ hora de saida];
-    h : real; [hora em cada parada];
-    mi : real;  [ minuto de saida];
-    m : real; [minuto em cada parada];
-    qi : real; [ quilometragem inicial, odômetro];
-    q : real; [ quilometragem percorrida em cada trecho ];
-    gi : real;  [ litros de gasolina iniciais];
-    g : real; [ litros de gasolina abastecidos na parada];
-    vm : real;  [ velocidade media por trecho];
-    cc : real;  [ consumo de combustivel, dado por km/litro];
-    pc : real;  [ previsão de chegada, dado por h+(vm/q)];
-    dt : real;  [ distancia pecorrida total];
-    t : real;  [ capacidade do tanque de combustivel em litros];
-    tt : real; [ quantidade restante de gasolina no tanque de combustivel ];
-    s : real; [ quando a resposta for sim digite 101];
-    n : real; [ quando a resposta for não digite 100];
+    hi : real;
+    h : real;
+    mi : real;
+    m : real;
+    qi : real;
+    q : real;
+    gi : real;
+    g : real;
+    vm : real;
+    cc : real;
+    pc : real;
+    dt : real;
+    t : real;
+    tt : real;
+    s : real;
+    n : real;
 fim-variáveis
 
-Inicio
+início
     imprima ("Digite a hora");
     hi:= leia();
     imprima ("Digite os minutos");
@@ -48,9 +48,9 @@ Inicio
         vm = (q-qi/h-hi);
         cc = (q-qi/g-gi);
         pc = (h+(vm/q));
-        imprima ("ULTIMO ABASTECIMENTO : PARA SIM DIGITE 101, PARA NÃO DIGITE 100 (101,100):"); --- adicionem o acento!!
+        imprima ("ULTIMO ABASTECIMENTO : PARA SIM DIGITE 101, PARA NAO DIGITE 100 (101,100):");
         ate(101)
     imprima ("Relatorio final do percurso");
 
-#########FAZER 3 - FAZER O RELATORIO FINAL ONDE DEVERÁ CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.#######
+FAZER 3 - FAZER O RELATORIO FINAL ONDE DEVERA CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.
 Fim
