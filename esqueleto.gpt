@@ -14,6 +14,8 @@ variáveis
     dt : real;  [ distancia pecorrida total];
     t : real;  [ capacidade do tanque de combustivel em litros];
     tt : real; [ quantidade restante de gasolina no tanque de combustivel ];
+    s : real; [ quando a resposta for sim digite 101];
+    n : real; [ quando a resposta for nao digite 100]; -- coloquem o acento !
 fim-variáveis
 
 Início
@@ -34,10 +36,10 @@ Início
 
 ***********FAZER 1 = INICIAR O LOOP AQUI, ALGUEM FAÇA ISSO PFVR****************************************************
  
-              EXEMPLO DO LOOP (PRECISA ADC AS VARIAVEIS E ORGANIZAR)
-              para<variavel> de <valor inicial da variavel> ate <valor limite> {opcional passo <de quanto em quanto>] faca
-              <instrução>
-              fimpara
+             repita
+            
+           
+
 
         imprima ("Digite a hora");
         h:=leia();
@@ -50,7 +52,9 @@ Início
         vm = (q-qi/h-hi);
         cc = (q-qi/g-gi);
         pc = (h+(vm/q));
-        imprima ("ULTIMO ABASTECIMENTO ? (S,N):);
+        imprima ("ULTIMO ABASTECIMENTO ? PARA SIM DIGITE 101, PARA NAO DIGITE 100 (101,100):); --- adicionem o acento!!
+
+        ate (101);
 ************FAZER 2 =  SE A RESPOSTA FOR SIM, ACABAR COM O LOOP E IMPRIMIR O RELATORIO FINAL (PESQUISAR SOBRE ISSO).*******************************************
 
     imprima ("Relatorio final do percurso");
