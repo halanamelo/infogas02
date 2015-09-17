@@ -37,8 +37,8 @@ Início
 ***********FAZER 1 = INICIAR O LOOP AQUI, ALGUEM FAÇA ISSO PFVR****************************************************
  
              repita
-            
-           
+             
+             
 
 
         imprima ("Digite a hora");
@@ -53,10 +53,7 @@ Início
         cc = (q-qi/g-gi);
         pc = (h+(vm/q));
         imprima ("ULTIMO ABASTECIMENTO ? PARA SIM DIGITE 101, PARA NAO DIGITE 100 (101,100):); --- adicionem o acento!!
-
-        ate (101);
-************FAZER 2 =  SE A RESPOSTA FOR SIM, ACABAR COM O LOOP E IMPRIMIR O RELATORIO FINAL (PESQUISAR SOBRE ISSO).*******************************************
-
+        ate(101)
     imprima ("Relatorio final do percurso");
 
 #########FAZER 3 - FAZER O RELATORIO FINAL ONDE DEVERÁ CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.#######
