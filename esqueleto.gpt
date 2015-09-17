@@ -1,6 +1,6 @@
 algoritmo infogas02;
 variáveis
-    hi : real;
+    hi : real; 
     h : real;
     mi : real;
     m : real;
@@ -8,6 +8,12 @@ variáveis
     q : real;
     gi : real;
     g : real;
+    vmp1 : real;
+    vmp2 : real;
+    vmp3 : real;
+    vmp4 : real;
+    vmp : real;
+    vmp5 : real;
     vm : real;
     cc : real;
     pc : real;
@@ -16,37 +22,52 @@ variáveis
     tt : real;
     s : real;
     n : real;
+    cc1 : real;
 fim-variáveis
+ /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inical, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, vmp1: quilometro parcial final, vmp2: hora parcial final, cc: consumo de combustível, pc: previsão de chegada, dt: distância total, t: , tt: , s: , n: ,vmp3: minutos parciais finais transformados em horas, vmp4: soma das horas com os minutos transformados, vmp5: minutos transformados em horas */
 
 início
-    imprima ("Digite a hora");
+    imprima ("Digite a hora:");
     hi:= leia();
-    imprima ("Digite os minutos");
+    imprima ("Digite os minutos:");
     mi:= leia();
-    imprima ("Digite a quilometragem inicial, odômetro");
+    imprima ("Digite a quilometragem inicial, odômetro:");
     qi:= leia();
-    imprima ("Capacidade total em litros do tanque da gasolina");
+    imprima ("Capacidade total em litros do tanque da gasolina:");
     t:=leia();
-    imprima ("Quantidade restante de gasolina em litros");
+    imprima ("Quantidade restante de gasolina em litros:");
     tt:=leia();
-    imprima (" Digite quantos litros de gasolina foram colocados no tanque");  
+    imprima (" Digite quantos litros de gasolina foram colocados no tanque:");  
     gi:= leia();
-    imprima ("Digite a distancia total da viagem");
+    imprima ("Digite a distancia total da viagem:");
     dt:= leia();
  
              repita
-             
+              
 
-        imprima ("Digite a hora");
+        imprima ("Digite a hora:");
         h:=leia();
-        imprima ("Quilometragem percorrida");
+        imprima ("Digite os minutos");
+        m:=leia();
+        imprima ("Quilometragem percorrida:");
         q:=leia();
-        imprima ("Digite a quantidade restante de gasolina no tanque em litros");
+        imprima ("Digite a quantidade restante de gasolina no tanque em litros:");
         tt:=leia();
-        imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
+        imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
         g:=leia();
-        imprima ("velocidade media: vm = (q-qi/h-hi");
-        imprima ("consumo combustivel: cc = (q-qi/g-g'i");
+        vmp1 := (q-qi);
+        vmp2 := (h-hi);
+        vmp3 := (m-mi);
+        vmp5 := (vmp3/60);
+        vmp4 := (vmp2+vmp5);
+        vmp := (vmp1/vmp4);
+        imprima ("Sua velocidade média foi: ", vmp, "km/h");
+        cc1 := (g-gi);
+        cc := (vmp1/cc1);
+        imprima ("consumo combustivel: ", cc, "km/l");
+        
+        
+
         imprima ("previsao de chegada: pc = (h+(vm/q)");
         imprima ("ULTIMO ABASTECIMENTO : PARA SIM DIGITE 101, PARA NAO DIGITE 100 (101,100):");
         até(101);
