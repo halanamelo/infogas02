@@ -42,9 +42,11 @@ Início
         h:=leia();
         imprima ("Quilometragem percorrida");
         q:=leia();
-        vm = (q-qi/h-hi);
+        imprima ("Digite a quantidade restante de gasolina no tanque em litros");
+        tt:=leia();
         imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
         g:=leia();
+        vm = (q-qi/h-hi);
         cc = (q-qi/g-gi);
         pc = (h+(vm/q));
         imprima ("ULTIMO ABASTECIMENTO ? (S,N):);
