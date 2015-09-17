@@ -56,17 +56,17 @@ início
         dp := (q-qi);
         hp := (h-hi);
         mp := (m-mi);
-        mh := (vmp3/60);
-        tp := (vmp2+vmp5);
-        vmp := (vmp1/vmp4);
-        imprima ("Sua velocidade média foi: ", vmp, "km/h");
+        mh := (mp/60);
+        tp := (hp+mh);
+        vm := (dp/tp);
+        imprima ("Sua velocidade média foi: ", vm, "km/h");
         cc1 := (g-gi);
-        cc := (vmp1/tt);
+        cc := (dp/gi-tt);
         imprima ("consumo combustivel: ", cc, "km/l");
         
         
 
-        imprima ("previsao de chegada: pc = (h+(vm/q)");
+        imprima ("previsao de chegada: pc = (h+vm/dp");
         imprima ("ULTIMO ABASTECIMENTO : PARA SIM DIGITE 101, PARA NAO DIGITE 100 (101,100):");
         até(101);
     imprima ("Relatorio final do percurso");
