@@ -26,15 +26,15 @@ fim-variáveis
  /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inical, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, pc: previsão de chegada, dt: distância total, t: , tt: , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
 
 início
-    imprima ("Digite a hora:");
+    imprima ("Digite a hora de saida:");
     hi:= leia();
-    imprima ("Digite os minutos:");
+    imprima ("Digite os minutos de saida:");
     mi:= leia();
     imprima ("Digite a quilometragem inicial, odômetro:");
     qi:= leia();
     imprima ("Capacidade total em litros do tanque da gasolina:");
     t:=leia();
-    imprima (" Digite quantos litros de gasolina foram colocados no tanque:");  
+    imprima (" Digite quantos litros de gasolina foram colocados inicialmente no tanque:");  
     gi:= leia();
     imprima ("Digite a distancia total da viagem:");
     dt:= leia();
@@ -59,8 +59,9 @@ início
         tp := (hp+mh);
         vm := (dp/tp);
         imprima ("Sua velocidade média foi: ", vm, "km/h");
+        dp := (qi-q);
         cc1 := (g-gi);
-        cc := (dp/gi-tt);
+        cc := (dp/cc1);
         imprima ("consumo combustivel: ", cc, "km/l");
         
         
