@@ -1,0 +1,63 @@
+algoritmo_infogas02;
+variáveis
+    hi : real;  [ hora de saida];
+    h : real; [hora em cada parada];
+    mi : real;  [ minuto de saida];
+    m : real; [minuto em cada parada];
+    qi : real; [ quilometragem inicial, odômetro];
+    q : real; [ quilometragem percorrida em cada trecho ];
+    gi : real;  [ litros de gasolina iniciais];
+    g : real; [ litros de gasolina abastecidos na parada];
+    vm : real;  [ velocidade media por trecho];
+    cc : real;  [ consumo de combustivel, dado por km/litro];
+    pc : real;  [ previsão de chegada, dado por h+(vm/q)];
+    dt : real;  [ distancia pecorrida total];
+    t : real;  [ capacidade do tanque de combustivel em litros];
+    tt : real; [ quantidade restante de gasolina no tanque de combustivel ];
+    s : real; [ quando a resposta for sim digite 101];
+    n : real; [ quando a resposta for nao digite 100]; -- coloquem o acento !
+fim-variáveis
+
+Início
+    imprima ("Digite a hora");
+    hi:= leia();
+    imprima ("Digite os minutos");
+    mi:= leia();
+    imprima ("Digite a quilometragem inicial, odômetro");
+    qi:= leia();
+    imprima ("Capacidade total em litros do tanque da gasolina");
+    t:=leia();
+    imprima ("Quantidade restante de gasolina em litros);
+    tt:=leia();
+    imprima (" Digite quantos litros de gasolina foram colocados no tanque");  
+    gi:= leia();
+    imprima ("Digite a distancia total da viagem");
+    dt:= leia();
+
+***********FAZER 1 = INICIAR O LOOP AQUI, ALGUEM FAÇA ISSO PFVR****************************************************
+ 
+             repita
+            
+           
+
+
+        imprima ("Digite a hora");
+        h:=leia();
+        imprima ("Quilometragem percorrida");
+        q:=leia();
+        imprima ("Digite a quantidade restante de gasolina no tanque em litros");
+        tt:=leia();
+        imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
+        g:=leia();
+        vm = (q-qi/h-hi);
+        cc = (q-qi/g-gi);
+        pc = (h+(vm/q));
+        imprima ("ULTIMO ABASTECIMENTO ? PARA SIM DIGITE 101, PARA NAO DIGITE 100 (101,100):); --- adicionem o acento!!
+
+        ate (101);
+************FAZER 2 =  SE A RESPOSTA FOR SIM, ACABAR COM O LOOP E IMPRIMIR O RELATORIO FINAL (PESQUISAR SOBRE ISSO).*******************************************
+
+    imprima ("Relatorio final do percurso");
+
+#########FAZER 3 - FAZER O RELATORIO FINAL ONDE DEVERÁ CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.#######
+Fim
