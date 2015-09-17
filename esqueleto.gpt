@@ -12,6 +12,7 @@ variáveis
     hp : real;
     mp : real;
     mh : real;
+    tpiha : real;
     vm : real;
     cc : real;
     pc : real;
