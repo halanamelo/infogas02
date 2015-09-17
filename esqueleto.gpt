@@ -24,7 +24,7 @@ variáveis
     n : real;
     cc1 : real;
 fim-variáveis
- /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inical, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, vmp1: quilometro parcial final, vmp2: hora parcial final, cc: consumo de combustível, pc: previsão de chegada, dt: distância total, t: , tt: , s: , n: ,vmp3: minutos parciais finais transformados em horas, vmp4: soma das horas com os minutos transformados, vmp5: minutos transformados em horas */
+ /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inical, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, pc: previsão de chegada, dt: distância total, t: , tt: , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
 
 início
     imprima ("Digite a hora:");
@@ -35,8 +35,6 @@ início
     qi:= leia();
     imprima ("Capacidade total em litros do tanque da gasolina:");
     t:=leia();
-    imprima ("Quantidade restante de gasolina em litros:");
-    tt:=leia();
     imprima (" Digite quantos litros de gasolina foram colocados no tanque:");  
     gi:= leia();
     imprima ("Digite a distancia total da viagem:");
@@ -45,9 +43,9 @@ início
              repita
               
 
-        imprima ("Digite a hora:");
+        imprima ("Digite a hora do abastecimento:");
         h:=leia();
-        imprima ("Digite os minutos");
+        imprima ("Digite os minutos do abastecimento:");
         m:=leia();
         imprima ("Quilometragem percorrida:");
         q:=leia();
@@ -55,15 +53,15 @@ início
         tt:=leia();
         imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
         g:=leia();
-        vmp1 := (q-qi);
-        vmp2 := (h-hi);
-        vmp3 := (m-mi);
-        vmp5 := (vmp3/60);
-        vmp4 := (vmp2+vmp5);
+        dp := (q-qi);
+        hp := (h-hi);
+        mp := (m-mi);
+        mh := (vmp3/60);
+        tp := (vmp2+vmp5);
         vmp := (vmp1/vmp4);
         imprima ("Sua velocidade média foi: ", vmp, "km/h");
         cc1 := (g-gi);
-        cc := (vmp1/cc1);
+        cc := (vmp1/tt);
         imprima ("consumo combustivel: ", cc, "km/l");
         
         
