@@ -65,7 +65,7 @@ início
         
         
 
-        imprima ("previsao de chegada: pc = (h+vm/dp");
+        imprima ("previsao de chegada: pc = (h+vm/dp)");
         imprima ("ULTIMO ABASTECIMENTO : PARA SIM DIGITE 101, PARA NAO DIGITE 100 (101,100):");
         até(101);
     imprima ("Relatorio final do percurso");
