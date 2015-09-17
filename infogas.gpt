@@ -1,13 +1,12 @@
 algoritmo_infogas
 
-
-********************** TRABALHAR NO ARQUIVO ESQUELETO.GPT, SÓ IREMOS MUDAR PARA O INFOGAS02.GPT NO FINAL DO TRABALHO.*************************
+************* TRABALHAR NO ARQUIVO ESQUELETO.GPT, SÓ IREMOS MUDAR PARA O INFOGAS02.GPT NO FINAL DO TRABALHO.**************
 
 variáveis
-
-    t : real;
     hi : inteiro;
+    h : real;
     mi : inteiro;
+    m : real;
     oi : real;
     ha : inteiro;
     ma : inteiro;
@@ -24,6 +23,7 @@ variáveis
 fim-varáveis
 
 início
-    imprima ("Digite a distância total da viagem (km)?");
-    dt := leia();
+       
+       impima ("NOTA:escreva as horas e minutos em decimais, ex: 1:30min = 1,5h");
+       imprima ("Digite a hora");
 fim
