@@ -8,12 +8,10 @@ variáveis
     q : real;
     gi : real;
     g : real;
-    vmp1 : real;
-    vmp2 : real;
-    vmp3 : real;
-    vmp4 : real;
-    vmp : real;
-    vmp5 : real;
+    dp : real;
+    hp : real;
+    mp : real;
+    mh : real;
     vm : real;
     cc : real;
     pc : real;
