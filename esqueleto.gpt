@@ -24,6 +24,7 @@ variáveis
     cc1 : real;
     prec1 : real;
     previsao : real;
+    parada : real;
 fim-variáveis
  /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inicial, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, pc: previsão de chegada, dt: distância total, t: , tt: , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
 
@@ -41,7 +42,7 @@ início
     imprima ("Digite a distancia total da viagem:");
     dt:= leia();
  
-         imprima ("Essa sera a sua ultima parada ? Se nao digite 0, Se sim digite 1");
+         imprima ("Essa sera a sua ultima parada ? Se nao digite 1, Se sim digite 2");
          parada:= leia();
         
          imprima ("Digite a hora do abastecimento:");
@@ -76,7 +77,7 @@ início
          imprima ("Previsao de chegada ao destino: ", previsao, "horas");
 
 
-             enquanto parada \= 1 faça 
+             enquanto parada = 1 faça 
 
              imprima ("Digite a hora do abastecimento:");
              h:=leia();
@@ -110,5 +111,5 @@ início
              imprima ("Previsao de chegada ao destino: ", previsao, "horas");
         
     imprima ("Relatorio final do percurso");
-
+  fim-enquanto
 fim
