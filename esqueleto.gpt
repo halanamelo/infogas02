@@ -37,54 +37,22 @@ início
     qi:= leia();
     imprima ("Capacidade total em litros do tanque da gasolina:");
     t:=leia();
-    imprima (" Digite quantos litros de gasolina foram colocados inicialmente no tanque:");  
+    imprima ("Digite quantos litros de gasolina foram colocados inicialmente no tanque:");  
     gi:= leia();
     imprima ("Digite a distancia total da viagem:");
     dt:= leia();
  
-         
-        
-         imprima ("Digite a hora do abastecimento:");
-         h:=leia();
-         imprima ("Digite os minutos do abastecimento:");
-         m:=leia();
-         imprima ("Quilometragem percorrida:");
-         q:=leia();
-         imprima ("Digite a quantidade restante de gasolina no tanque em litros:");
-         tt:=leia();
-         imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
-         g:=leia();
-         dp := (q-qi);
-         hp := (h-hi);
-         mp := (m-mi);
-         mh := (mp/60);
-         tp := (hp+mh);
-         vm := (dp/tp);
-         imprima ("Sua velocidade média foi: ", vm, "km/h");
-         dp := (qi-q);
-         cc1 := (g-gi);
-         cc := (dp/cc1);
-         imprima ("Consumo combustivel: ", cc, "km/l");
-         dp := (q-qi);
-         hp := (h-hi);
-         mp := (m-mi);
-         mh := (mp/60);
-         tp := (hp+mh);
-         vm := (dp/tp);
-         prec1 := (dt-dp);
-         previsao := (prec1/vm);
-         imprima ("Previsao de chegada ao destino: ", previsao, "horas");
 
              imprima ("Essa será sua ultima parada? Se sim digite 1, se não digite 2");
              parada := leia ();
              
              enquanto parada = 2 faça
              
-             imprima ("Digite a hora do abastecimento:");
+             imprima ("Digite a hora do seu abastecimento:");
              h:=leia();
-             imprima ("Digite os minutos do abastecimento:");
+             imprima ("Digite os minutos do seu abastecimento:");
              m:=leia();
-             imprima ("Quilometragem percorrida:");
+             imprima ("A quilometragem que você percorreu :");
              q:=leia();
              imprima ("Digite a quantidade restante de gasolina no tanque em litros:");
              tt:=leia();
@@ -96,20 +64,22 @@ início
              mh := (mp/60);
              tp := (hp+mh);
              vm := (dp/tp);
-             imprima ("Sua velocidade média foi: ", vm, "km/h");
+             imprima ("A sua velocidade média foi: ", vm, "km/h");
              dp := (qi-q);
              cc1 := (g-gi);
              cc := (dp/cc1);
-             imprima ("Consumo combustivel: ", cc, "km/l");
+             imprima ("O seu consumo combustivel foi de: ", cc, "km/l");
              dp := (q-qi);
              hp := (h-hi);
              mp := (m-mi);
              mh := (mp/60);
              tp := (hp+mh);
              vm := (dp/tp);
+             qi := q;
+             gi := g;
              prec1 := (dt-dp);
-             previsao   := (prec1/vm);
-             imprima ("Previsao de chegada ao destino: ", previsao, "horas");
+             previsao   := ((prec1/vm)-(dt/vm));
+             imprima ("Previsao de chegada ao seu destino: ", previsao, "horas");
              imprima ("Essa será sua ultima parada? Se sim digite 1, se não digite 2");
              parada := leia(); 
     
