@@ -1,47 +1,114 @@
-algoritmo_infogas02;
+algoritmo infogas02;
 variáveis
-    hi : real;  [ hora de saida];
-    h : real; [hora em cada parada];
-    mi : real;  [ minuto de saida];
-    m : real; [minuto em cada parada];
-    qi : real;  [ quilometragem inicial];
-    q : real; [ quilometragem percorrida em cada trecho ];
-    gi : real;  [ litros de gasolina iniciais];
-    g : real; [ litros de gasolina abastecidos na parada];
-    vm : real;  [ velocidade media por trecho];
-    cc : real;  [ consumo de combustivel, dado por km/litro];
-    pc : real;  [ previsão de chegada, ainda não fiz a formula(eu tentei fazer*aron*)];
-    dt : real;  [ distancia pecorrida total];
-    t : real;  [ capacidade do tanque de combustivel em litros];
+    hi : real; 
+    h : real;
+    mi : real;
+    m : real;
+    qi : real;
+    q : real;
+    gi : real;
+    g : real;
+    dp : real;
+    hp : real;
+    mp : real;
+    mh : real;
+    vm : real;
+    cc : real;
+    pc : real;
+    dt : real;
+    t : real;
+    tt : real;
+    tp : real;
+    s : real;
+    n : real;
+    cc1 : real;
+    prec1 : real;
+    previsao : real;
+    parada : real;
 fim-variáveis
-
-Início
-    imprima ("Digite a hora");
+ /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inicial, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, pc: previsão de chegada, previsão: previsão, parada: parada do laço, cc1: calculo para o consumo de combustível, dt: distância total, t: , tt:tempo total do percurso , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
+início
+    imprima ("Digite a hora de saida:");
     hi:= leia();
-    imprima ("Digite a quilometragem inicial");
+    imprima ("Digite os minutos de saida:");
+    mi:= leia();
+    imprima ("Digite a quilometragem inicial, odômetro:");
     qi:= leia();
-    imprima ("Capacidade total em litros do tanque da gasolina");
+    imprima ("Capacidade total em litros do tanque da gasolina:");
     t:=leia();
-    imprima (" Digite quantos litros de gasolina foram colocados no tanque");  
+    imprima (" Digite quantos litros de gasolina foram colocados inicialmente no tanque:");  
     gi:= leia();
-    imprima ("Digite a distancia total da viagem");
+    imprima ("Digite a distancia total da viagem:");
     dt:= leia();
+ 
+         imprima ("Essa sera a sua ultima parada ? Se nao digite 1, Se sim digite 2");
+         parada:= leia();
+        
+         imprima ("Digite a hora do abastecimento:");
+         h:=leia();
+         imprima ("Digite os minutos do abastecimento:");
+         m:=leia();
+         imprima ("Quilometragem percorrida:");
+         q:=leia();
+         imprima ("Digite a quantidade restante de gasolina no tanque em litros:");
+         tt:=leia();
+         imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
+         g:=leia();
+         dp := (q-qi);
+         hp := (h-hi);
+         mp := (m-mi);
+         mh := (mp/60);
+         tp := (hp+mh);
+         vm := (dp/tp);
+         imprima ("Sua velocidade média foi: ", vm, "km/h");
+         dp := (qi-q);
+         cc1 := (g-gi);
+         cc := (dp/cc1);
+         imprima ("Consumo combustivel: ", cc, "km/l");
+         dp := (q-qi);
+         hp := (h-hi);
+         mp := (m-mi);
+         mh := (mp/60);
+         tp := (hp+mh);
+         vm := (dp/tp);
+         prec1 := (dt-dp);
+         previsao := (prec1/vm);
+         imprima ("Previsao de chegada ao destino: ", previsao, "horas");
 
-************ ESSE TRECHO ABAIXO É PRA SE REPETIR EM UM LOOP, A CADA PARADA,A EXEMPLO DO (WHILE) NO ARQUIVO c *****************************************************
 
-        imprima ("Digite a hora");
-        h:=leia();
-        imprima ("Quilometragem percorrida");
-        q:=leia();
-        vm = (q-qi/h-hi);
-        imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada");
-        g:=leia();
-        cc = (qt-q/g-gt);
-        pc = (h*qt/dt);
-        imprima ("ULTIMO ABASTECIMENTO ? (S,N):);
-************ SE A RESPOSTA FOR SIM, ACABAR COM O LOOP E IMPRIMIR O RELATORIO FINAL, PESQUISEM SOBRE ISSO*******************************************
+             enquanto parada = 1 faça 
 
+             imprima ("Digite a hora do abastecimento:");
+             h:=leia();
+             imprima ("Digite os minutos do abastecimento:");
+             m:=leia();
+             imprima ("Quilometragem percorrida:");
+             q:=leia();
+             imprima ("Digite a quantidade restante de gasolina no tanque em litros:");
+             tt:=leia();
+             imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
+             g:=leia();
+             dp := (q-qi);
+             hp := (h-hi);
+             mp := (m-mi);
+             mh := (mp/60);
+             tp := (hp+mh);
+             vm := (dp/tp);
+             imprima ("Sua velocidade média foi: ", vm, "km/h");
+             dp := (qi-q);
+             cc1 := (g-gi);
+             cc := (dp/cc1);
+             imprima ("Consumo combustivel: ", cc, "km/l");
+             dp := (q-qi);
+             hp := (h-hi);
+             mp := (m-mi);
+             mh := (mp/60);
+             tp := (hp+mh);
+             vm := (dp/tp);
+             prec1 := (dt-dp);
+             previsao := (prec1/vm);
+             imprima ("Previsao de chegada ao destino: ", previsao, "horas");
+        
     imprima ("Relatorio final do percurso");
-
-#################DEVERÁ CONSTAR NECESSARIAMENTE NO RELATORIO, O CONSUMO TOTAL, A VELOCIDADE MEDIA, E O GASTO TOTAL.########################################
-Fim
+  fim-enquanto
+fim
