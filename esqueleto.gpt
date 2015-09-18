@@ -35,6 +35,7 @@ variáveis
     parada : real;
     parada1 : real;
     tt1 : real;
+
 fim-variáveis
  /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inicial, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, parada1:receber valor da pergunta de parada,  pc: previsão de chegada, previsão: previsão, parada: parada do laço, cc1: calculo para o consumo de combustível, dt: distância total, t: , tt:tempo total do percurso , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
 início
@@ -77,8 +78,8 @@ início
          tp := (hp+mh);
          vm := (dp/tp);
          imprima ("A sua velocidade média foi: ", vm, "km/h");
-         dp := (qi-qt1);
-         cc1 := (tt1-gi);
+         dp := (qt1-qi);
+         cc1 := (gi-tt1);
          cc := (dp/cc1);
          imprima ("O seu consumo combustivel foi de: ", cc, "km/l");
          dp := (qt1-qi);
@@ -116,16 +117,16 @@ início
          tt1:=leia();
          imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
          gt1:=leia();
-
+                 
          dp := (qt1-qi);
          hp := (ht1-hi);
          mp := (mt1-mi);
          mh := (mp/60);
          tp := (hp+mh);
          vm := (dp/tp);
-         imprima ("A sua velocidade média foi: ", vm, "km/h");
+        imprima ("A sua velocidade média foi: ", vm, "km/h");
          dp := (qt1-qi);
-         cc1 := (gt1-gi);
+         cc1 := (gi-tt1);
          cc := (dp/cc1);
          imprima ("O seu consumo combustivel foi de: ", cc, "km/l");
          dp := (qt1-qi);
@@ -136,7 +137,7 @@ início
          vm := (dp/tp);
           
          prec1 := (dt-dp);
-         previsao   := (prec1/vm);
+         previsao   := (vm/prec1);
          imprima ("Previsao de chegada ao seu destino: ", previsao, "horas");
          imprima ("Essa será sua ultima parada? Se sim digite 1, se não digite 2");
          parada := leia(); 
