@@ -25,8 +25,9 @@ variáveis
     prec1 : real;
     previsao : real;
     parada : real;
+    parada1 : real;
 fim-variáveis
- /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inicial, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, pc: previsão de chegada, previsão: previsão, parada: parada do laço, cc1: calculo para o consumo de combustível, dt: distância total, t: , tt:tempo total do percurso , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
+ /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inicial, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, parada1:receber valor da pergunta de parada,  pc: previsão de chegada, previsão: previsão, parada: parada do laço, cc1: calculo para o consumo de combustível, dt: distância total, t: , tt:tempo total do percurso , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
 início
     imprima ("Digite a hora de saida:");
     hi:= leia();
@@ -41,8 +42,7 @@ início
     imprima ("Digite a distancia total da viagem:");
     dt:= leia();
  
-         imprima ("Essa sera a sua ultima parada ? Se nao digite 1, Se sim digite 2");
-         parada:= leia();
+         
         
          imprima ("Digite a hora do abastecimento:");
          h:=leia();
@@ -75,9 +75,11 @@ início
          previsao := (prec1/vm);
          imprima ("Previsao de chegada ao destino: ", previsao, "horas");
 
-
-             enquanto parada = 1 faça 
-
+             imprima ("Essa será sua ultima parada? Se sim digite 1, se não digite 2");
+             parada := leia ();
+             
+             enquanto parada = 2 faça
+             
              imprima ("Digite a hora do abastecimento:");
              h:=leia();
              imprima ("Digite os minutos do abastecimento:");
@@ -106,9 +108,11 @@ início
              tp := (hp+mh);
              vm := (dp/tp);
              prec1 := (dt-dp);
-             previsao := (prec1/vm);
+             previsao   := (prec1/vm);
              imprima ("Previsao de chegada ao destino: ", previsao, "horas");
-        
-    imprima ("Relatorio final do percurso");
+             imprima ("Essa será sua ultima parada? Se sim digite 1, se não digite 2");
+             parada := leia(); 
+    
   fim-enquanto
+  imprima ("Relatorio final do percurso");
 fim
