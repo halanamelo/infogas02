@@ -152,6 +152,12 @@ início
 
   imprima ("Relatorio final do percurso");
  
-         imprima ("Consumo total do combustivel");
-         cc := [dp/(gi+gt)-tt1];
+         imprima ("Consumo total do combustivel: ", cc, "km/l");
+         cc := (dp/(gi+gt1+gt)-tt1);
+         imprima ("Tempo total gasto: ", tt, "horas");
+         tt := (hi+ht);
+         imprima ("Distancia pecorrida: ", dp, "km");
+         dp := (qt1+qt);
+         imprima ("Velocidade média total: ", vm, "km/h");
+         vm := (qt1-qi)/((variacaominuto/60)+ht1-hi);
 fim
