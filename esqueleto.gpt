@@ -134,10 +134,14 @@ início
 
 /*Após acabado o loop, imprimirá o relatorio final abaixo*/
 
+ ---------- NÃO MEXER NO RELATORIO FINAL, AIND AFALTA ALGUNS AJUSTES--------
+
   imprima ("Relatorio final do percurso");
  
          imprima ("Consumo total do combustivel: ", cc, "km/l");
          cc := (dp/(gi+gt1+gt)-tt1);
+         imprima ("Distancia pecorrida: ", dp, "km");
+         dp := (q-qi);
          imprima ("Velocidade média total: ", vm, "km/h");
          vm := (qt1-qi)/((variacaominuto/60)+ht1-hi);
       
