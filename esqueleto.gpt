@@ -120,11 +120,7 @@ início
 /*Inicio do calculo da velocidade media*/
 
          variacaominuto:=mt1-mi; 
-         imprima (qt1);
-         imprima (qi);
-         imprima (variacaominuto);
-         imprima (ht1);
-         imprima (hi);
+ 
          vm:=(qt1-qi)/((variacaominuto/60)+ht1-hi);
 
 
