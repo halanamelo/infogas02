@@ -1,47 +1,44 @@
 algoritmo infogas02;
 variáveis
-    hi  : real; 
-    ht1 : real;
-    ht  : real; 
+    hi  : real; /*hora inicial*/
+    ht1 : real; /*hora na primeira parada*/
+    ht  : real; /*hora na 2 parada em diante*/
 
-    mi : real;
-    mt1 : real;
-    mt : real;
+    mi : real; /*minuto inicial*/
+    mt1 : real; /*minuto na primeira parada*/
+    mt : real; /*minuto parada 2 em diante*/
 
-    qi : real;
-    qt1 : real;
-    qt : real;
+    qi : real; /*odometro inicial*/
+    qt1 : real; /*odometro na primeira parada*/
+    qt : real; /*odometro na 2 parada em diante*/
 
-    gi : real;
-    gt1 : real;
-    gt : real;
+    gi : real; /*gasolina inicial*/
+    gt1 : real; /*gasolina na primeira parada*/
+    gt : real; /*gasolina parada 2 em diante*/
 
-    dp : real;
-    hp : real;
-    mp : real;
-    mh : real;
-    vm : real;
-    cc : real;
-    pc : real;
-    dt : real;
-    t : real;
-    tt : real;
-    tp : real;
-    s : real;
-    n : real;
-    cc1 : real;
-    prec1 : real;
-    previsao : real;
-    parada : real;
-    parada1 : real;
-    tt1 : real;
+    dp : real; /*distancia percorrida*/
+    hp : real; /*hora percorrida*/
+    mp : real; /*minutos percorridos*/
+    mh : real; /*minutos transformados em hora*/
+    vm : real; /*velocidade media*/
+    cc : real; /*consumo de combustivel*/
+    dt : real; /*distancia total*/
+    t : real; /* capacidade total do tanque*/
+    tt : real; /*tempo total do percurso*/
+    tp : real; /*soma das horas com os minutos*/
+    cc1 : real; /*calculo para consumo de combustivel*/
+    prec1 : real; /*calculo da previsao*/
+    previsao : real; /*previsao de chegada*/
+    parada : real; /*parada do loop*/
+    tt1 : real; /*quantidade restante de gasolina no tanque*/
 
 fim-variáveis
- /* hi: hora inicial, h: hora, mi: minuto inicial, m: minuto, qi: quilometragem inicial, q: quilometragem, gi: gasolina inicial, g: gasolina final, vm: velocidade média, dp: distncia percorrida, hp: hora percorrida, cc: consumo de combustível, parada1:receber valor da pergunta de parada,  pc: previsão de chegada, previsão: previsão, parada: parada do laço, cc1: calculo para o consumo de combustível, dt: distância total, t: , tt:tempo total do percurso , s: , n: ,mp: minutos percorridos transformados em horas, tp: soma das horas com os minutos transformados em horas, tempo percorrido, mh: minutos transformados em horas */
+
 início
 
 
 /*Saída*/
+
 
 
          imprima ("Digite a hora de saida:");
@@ -118,13 +115,13 @@ início
          imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
          gt1:=leia();
                  
-         dp := (qt1-qi);
+         dp := (qi-qt1);
          hp := (ht1-hi);
          mp := (mt1-mi);
          mh := (mp/60);
          tp := (hp+mh);
          vm := (dp/tp);
-        imprima ("A sua velocidade média foi: ", vm, "km/h");
+         imprima ("A sua velocidade média foi: ", vm, "km/h");
          dp := (qt1-qi);
          cc1 := (gi-tt1);
          cc := (dp/cc1);
