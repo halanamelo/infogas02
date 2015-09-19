@@ -130,7 +130,12 @@ início
          prec1 := (dt-qt1);
          previsao   := (prec1/vm);
          imprima ("Previsao de chegada ao seu destino: ", previsao, "horas");
-         imprima ("Essa será sua ultima parada? Se sim digite 1, se não digite 2");
+
+         qi:=qt1;
+         hi:=ht1;
+         mi:=mt1;
+        
+        imprima ("Essa será sua ultima parada? Se sim digite 1, se não digite 2");
          parada := leia(); 
     
      fim-enquanto
@@ -141,8 +146,6 @@ início
 
   imprima ("Relatorio final do percurso");
         
-         imprima (dt);
-         imprima (cct);
 
          ccht := dt/cct;
          imprima ("Seu consumo de combustivel total foi de: ", ccht, "km/l");
