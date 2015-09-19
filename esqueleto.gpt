@@ -17,6 +17,7 @@ variáveis
     mp : real; /*minutos percorridos*/
     mh : real; /*minutos transformados em hora*/
     vm : real; /*velocidade media*/
+    vmt : real; /*velocidade media total*/
     cc : real; /*consumo de combustivel*/
     dt : real; /*distancia total*/
     tt : real; /*tempo total do percurso*/
@@ -26,6 +27,9 @@ variáveis
     previsao : real; /*previsao de chegada*/
     parada : real; /*parada do loop*/
     variacaominuto : real;
+    htotal : real; /*hora pra vmt*/
+    cct : real; /*consumo de combustivel total para calculo do ccht*/
+    ccht : real; /*consumo de combustivel total em km/l do relatorio*/
 
 fim-variáveis
 
@@ -45,7 +49,7 @@ início
          imprima ("Digite a distancia total da viagem:");
          dt:= leia();
 
-
+         htotal := hi;
 /*Primeiro abastecimento*/
 
 
@@ -77,18 +81,16 @@ início
          imprima ("Previsao de chegada ao seu destino: ", previsao, "horas");
 
 
-
 /*Inicio do loop*/
 
 
+         cct := cct + gt1; 
 
          imprima ("Essa será sua ultima parada? Se sim digite 1, se não digite 2");
          parada := leia ();
          qi:=qt1;
-         gi:=gt1;
          hi:=ht1;
          mi:=mt1;
-         t:=tt1;
 
          enquanto parada = 2 faça
 
@@ -101,6 +103,7 @@ início
          imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
          gt1:=leia();
                  
+         cct := cct + gt1;       
 /*Inicio do calculo da velocidade media*/
 
          variacaominuto:=mt1-mi; 
@@ -134,15 +137,16 @@ início
 
 /*Após acabado o loop, imprimirá o relatorio final abaixo*/
 
- ---------- NÃO MEXER NO RELATORIO FINAL, AIND AFALTA ALGUNS AJUSTES--------
+
 
   imprima ("Relatorio final do percurso");
- 
-         imprima ("Consumo total do combustivel: ", cc, "km/l");
-         cc := (dp/(gi+gt1+gt)-tt1);
-         imprima ("Distancia pecorrida: ", dp, "km");
-         dp := (q-qi);
-         imprima ("Velocidade média total: ", vm, "km/h");
-         vm := (qt1-qi)/((variacaominuto/60)+ht1-hi);
+        
+         imprima (dt);
+         imprima (cct);
+
+         ccht := dt/cct;
+         imprima ("Seu consumo de combustivel total foi de: ", ccht, "km/l");
+         vmt := dt/(ht1-htotal);
+         imprima ("Velocidade média total: ", vmt, "km/h");
       
 fim
