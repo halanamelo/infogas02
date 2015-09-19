@@ -31,6 +31,7 @@ variáveis
     previsao : real; /*previsao de chegada*/
     parada : real; /*parada do loop*/
     tt1 : real; /*quantidade restante de gasolina no tanque*/
+    variacaominuto : real;
 
 fim-variáveis
 
@@ -99,6 +100,7 @@ início
          parada := leia ();
          qi:=qt1;
          gi:=gt1;
+         hi:=ht1;
          mi:=mt1;
          t:=tt1;
 
@@ -115,17 +117,26 @@ início
          imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
          gt1:=leia();
                  
-         dp := (qi-qt1);
-         hp := (ht1-hi);
-         mp := (mt1-mi);
-         mh := (mp/60);
-         tp := (hp+mh);
-         vm := (dp/tp);
+/*Inicio do calculo da velocidade media*/
+
+         variacaominuto:=mt1-mi; 
+         imprima (qt1);
+         imprima (qi);
+         imprima (variacaominuto);
+         imprima (ht1);
+         imprima (hi);
+         vm:=(qt1-qi)/((variacaominuto/60)+ht1-hi);
+
+
+
          imprima ("A sua velocidade média foi: ", vm, "km/h");
-         dp := (qt1-qi);
-         cc1 := (gi-tt1);
-         cc := (dp/cc1);
+
+/*Inicio do calculo do consumo de combustivel*/
+             
+       
+         cc:=(qt1-qi)/((t+gi)-tt1);
          imprima ("O seu consumo combustivel foi de: ", cc, "km/l");
+
          dp := (qt1-qi);
          hp := (ht1-hi);
          mp := (mt1-mi);
