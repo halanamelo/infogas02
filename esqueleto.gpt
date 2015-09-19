@@ -140,8 +140,8 @@ início
          tp := (hp+mh);
          vm := (dp/tp);
           
-         prec1 := (dt-dp);
-         previsao   := (vm/prec1);
+         prec1 := (dt-qt1);
+         previsao   := (prec1/vm);
          imprima ("Previsao de chegada ao seu destino: ", previsao, "horas");
          imprima ("Essa será sua ultima parada? Se sim digite 1, se não digite 2");
          parada := leia(); 
