@@ -151,4 +151,7 @@ início
 /*Após acabado o loop, imprimirá o relatorio final abaixo*/
 
   imprima ("Relatorio final do percurso");
+ 
+         imprima ("Consumo total do combustivel");
+         cc := [dp/(gi+gt)-tt1];
 fim
