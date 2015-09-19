@@ -2,17 +2,13 @@ algoritmo infogas02;
 variáveis
     hi  : real; /*hora inicial*/
     ht1 : real; /*hora na primeira parada*/
-    ht  : real; /*hora na 2 parada em diante*/
 
     mi : real; /*minuto inicial*/
     mt1 : real; /*minuto na primeira parada*/
-    mt : real; /*minuto parada 2 em diante*/
 
     qi : real; /*odometro inicial*/
     qt1 : real; /*odometro na primeira parada*/
-    qt : real; /*odometro na 2 parada em diante*/
 
-    gi : real; /*gasolina inicial*/
     gt1 : real; /*gasolina na primeira parada*/
     gt : real; /*gasolina parada 2 em diante*/
 
@@ -23,14 +19,12 @@ variáveis
     vm : real; /*velocidade media*/
     cc : real; /*consumo de combustivel*/
     dt : real; /*distancia total*/
-    t : real; /* capacidade total do tanque*/
     tt : real; /*tempo total do percurso*/
     tp : real; /*soma das horas com os minutos*/
     cc1 : real; /*calculo para consumo de combustivel*/
     prec1 : real; /*calculo da previsao*/
     previsao : real; /*previsao de chegada*/
     parada : real; /*parada do loop*/
-    tt1 : real; /*quantidade restante de gasolina no tanque*/
     variacaominuto : real;
 
 fim-variáveis
@@ -48,15 +42,11 @@ início
          mi:= leia();
          imprima ("Digite a quilometragem inicial, odômetro:");
          qi:= leia();
-         imprima ("Capacidade total em litros do tanque da gasolina:");
-         t:=leia();
-         imprima ("Digite quantos litros de gasolina foram colocados inicialmente no tanque:");  
-         gi:= leia();
          imprima ("Digite a distancia total da viagem:");
          dt:= leia();
 
 
-/*Primeiro abastecimento : tá dando os calculos certos*/
+/*Primeiro abastecimento*/
 
 
          imprima ("Digite a hora do seu primeiro abastecimento:");
@@ -65,8 +55,6 @@ início
          mt1:=leia();
          imprima ("Quanto marca o seu odometro na primeira parada :");
          qt1:=leia();
-         imprima ("Digite a quantidade restante de gasolina no tanque em litros na primeira parada:");
-         tt1:=leia();
          imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
          gt1:=leia();
          dp := (qt1-qi);
@@ -76,9 +64,7 @@ início
          tp := (hp+mh);
          vm := (dp/tp);
          imprima ("A sua velocidade média foi: ", vm, "km/h");
-         dp := (qt1-qi);
-         cc1 := (gi-tt1);
-         cc := (dp/cc1);
+         cc := (dp/gt1);
          imprima ("O seu consumo combustivel foi de: ", cc, "km/l");
          dp := (qt1-qi);
          hp := (ht1-hi);
@@ -92,7 +78,7 @@ início
 
 
 
-/*Inicio do loop os calculos tão dando errados*/
+/*Inicio do loop*/
 
 
 
@@ -111,9 +97,7 @@ início
          imprima ("Digite os minutos do seu abastecimento:");
          mt1:=leia();
          imprima ("Quanto marca o seu odometro :");
-         qt1:=leia();
-         imprima ("Digite a quantidade restante de gasolina no tanque em litros:");
-         tt1:=leia();
+         qt1:=leia();  
          imprima ("Digite quantos litros de gasolina foram abastecidos nesta parada:");
          gt1:=leia();
                  
@@ -130,7 +114,7 @@ início
 /*Inicio do calculo do consumo de combustivel*/
              
        
-         cc:=(qt1-qi)/((t+gi)-tt1);
+         cc:=(qt1-qi)/gt1;
          imprima ("O seu consumo combustivel foi de: ", cc, "km/l");
 
          dp := (qt1-qi);
@@ -153,5 +137,5 @@ início
   imprima ("Relatorio final do percurso");
  
          imprima ("Consumo total do combustivel");
-         cc := [dp/(gi+gt)-tt1];
+         cc := dp/((gi+gt)-tt1);
 fim
