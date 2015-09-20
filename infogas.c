@@ -6,31 +6,49 @@
   {
 
  // Variáveis //
-     int parada, n;
-     float horainicial, mininicial, kminicial, kmtrecho, distancia, kmpara, kmrestante, km0, kmpercorrido, horaparada, minparada, abast, abastacumulado, tempoviagem, tempoinicial, tempoparada, tempo0, vm, previsao, consumo, consumot, vmt;
+     int parada, n, x, horas;
+     float horainicial, mininicial, kminicial, kmtrecho, distancia, kmpara, kmrestante, km0, kmpercorrido, horaparada, minparada, abast, abastacumulado, tempoviagem, tempoinicial, tempoparada, tempo0, vm, previsao, consumo, consumot, vmt, minutos;
  
-     printf("Considere que a viagem será realizada dentro de um dia, ou seja, não ultrapassará 24 hrs.\n Considere que o carro inicia a viagem com o tanque abastecido e a cada parada para abastecimento ele complete o tanque.\n\n");
+     printf("\n\n\n\n");
+     printf("INSTRUCOES: \nConsidere que a viagem será realizada dentro de um dia, ou seja, não ultrapassará 24 hrs.\nConsidere que o carro inicia a viagem com o tanque abastecido e a cada parada para abastecimento ele complete o tanque. \nDigite primeiramente a hora, e depois os minutos separadamente.\n\n");
  
  // Entradas de dados //
     
-     printf ("Informe a hora de saida:\n");
+     do
+     {
+     printf ("Informe a hora de saida (H):\n");
      scanf ("%g", &horainicial);
-                          
-     printf("E os minutos?\n");
-     scanf("%g", &mininicial);
+
+     }while(horainicial<0 || horainicial>=24);
+   
+     do
+     {
+          printf("E os minutos (M)?\n");
+          scanf("%g", &mininicial);
+
+     }while(mininicial>=60 || mininicial<0);     
                                        
-     printf ("Informe a kilometragem atual:\n");
-     scanf ("%g", & kminicial);
-                                          
-     printf ("Informe qual a distancia total ate o seu  destino:\n");
-     scanf ("%g", &distancia);
+     do
+     {
+         printf ("Informe a kilometragem atual em km:\n");
+         scanf ("%g", & kminicial);
+
+     }while(kminicial<0);
+      
+     do
+     {
+         printf ("Informe qual a distancia total ate o seu  destino em km:\n");
+         scanf ("%g", &distancia);
+
+     }while(distancia<=0);
+
      printf("\n\n");
                                                               
  // Conversão horas em minutos //
      tempoinicial= mininicial/60.0+horainicial;
                                                                   
  // Paradas //
-     printf ("Inserir dados da parada de abastecimento!\n\n");
+     printf ("Boa Viagem!\n\nInserir dados da parada de abastecimento!\n\n\7");
      n=2;
      parada=0;
      km0=kminicial;
@@ -44,19 +62,20 @@
 
           do
           {
-               printf ("Informe a hora da parada:\n");
+               printf ("Informe a hora da parada (H):\n");
                scanf ("%g", &horaparada);
                
-               printf ("E os minutos?\n");
+               printf ("E os minutos (M)?\n");
                scanf ("%g", &minparada);
-               tempoparada= minparada/60.0+horaparada;                                           
+               tempoparada= minparada/60.0+horaparada;
+
           }while(tempo0>tempoparada);
              
           do
           {
-               printf ("Informe a kilometragem atual:\n");
+               printf ("Informe a kilometragem atual em km:\n");
                scanf ("%g", &kmpara);
-          }while(kmpara<km0);
+          }while(kmpara<km0 || kmpara>(distancia+kminicial));
          
           do
           {
@@ -83,10 +102,15 @@
           kmpercorrido=kmpercorrido+kmtrecho;
           kmrestante=distancia-kmpercorrido;
           previsao=kmrestante/vm;
+ //Conversão de horas em minutos//
+          horas=previsao;
+          x=(previsao-horas)*60;
+          minutos=x;
                                                                                                                                                              
-          printf("Velocidade media: %g km/h \n",vm);
+          printf("Relatorio Parcial: \n\nVelocidade media: %g km/h \n",vm);
           printf("Consumo: %g km/l \n",consumo);
-          printf("Previsao de chegada: %g hora(s) \n\n",previsao);
+          printf("Previsao de chegada daqui a %d hora(s)",horas);
+          printf(" e %g minuto(s) \n\n", minutos);
                                                                                
  // reset de espaço //
           km0=km0+kmtrecho;
@@ -96,7 +120,7 @@
  
           do
           {
-               printf("Ultimo abastecimento? para sim pressione 1 / para nao pressione 2.\n");
+               printf("Esta é sua ultima parada? para sim pressione 1 / para nao pressione 2.\n");
                scanf("%d", &n); 
           }while(n<1 || n>2);
  
@@ -109,7 +133,7 @@
  // consumo total //
      consumot=distancia/abastacumulado;
  
-     printf("Relatorio final \n\n");
+     printf("Relatorio Final \n\n");
      printf("Velocidade media final: %g km/h \n",vmt);
      printf("Consumo final: %g km/l \n",consumot);
   }
