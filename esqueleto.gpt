@@ -14,8 +14,8 @@ variáveis
 
     dp : real; /*distancia percorrida*/
     hp : real; /*hora percorrida*/
-    mp : real; /*minutos percorridos*/
-    mh : real; /*minutos transformados em hora*/
+    mb : real; /*minutos percorridos*/
+    mpt : real; /*minutos transformados em hora*/
     vm : real; /*velocidade media*/
     vmt : real; /*velocidade media total*/
     cc : real; /*consumo de combustivel*/
@@ -32,7 +32,11 @@ variáveis
     ccht : real; /*consumo de combustivel total em km/l do relatorio*/
     odometro : real; /*calculo do odometro final menos inicial para calculo de previsao*/
     vi : real; 
-
+    y : real;
+    horadeconversao : real;
+    mp : real;
+    mh : real;
+    tempo : real;
 fim-variáveis
 
 início
@@ -76,25 +80,33 @@ início
 
          dp := (qt1-qi);
          hp := (ht1-hi);
-         vm := (dp/hp);
+         mb := (mt1-mi);
+
+         se mb < 0 então
+           mb := (mb * -1);
+         fim-se
+         mpt := (mb / 60);
+         tempo := (mpt + hp);
+         vm := (dp/tempo);
          prec1 := (dt-dp);
          odometro := (dt+qi);
          previsao   := (prec1/vm);
 
- 
-         vi := (mt1 - mi);
-           se vi < 0 então
-           vi := vi * -1;
+         y := (previsao *60);
+
+
+         enquanto y > 59 faça
+           horadeconversao := horadeconversao +1;
+           y := (y -60);
+         fim-enquanto
+        
+         se horadeconversao + y = 0 então
+            imprima ("Você chegou ao seu destino, por favor digite 1 na proxima pergunta");
          fim-se
 
 
-
-
-         imprima ("\nPrevisao de chegada ao seu destino:\n ",previsao, "h" , vi , "m");
-        se previsao = 0
-           imprima ("Você chegou ao seu destino, por favor digite 1 na proxima pergunta!");
-        fim-se
-
+         imprima ("\nPrevisao de chegada ao seu destino:\n ",horadeconversao, "h" , y , "m");
+ 
 /*Inicio do loop*/
 
 
@@ -136,17 +148,31 @@ início
 
          dp := (qt1-qi);
          hp := (ht1-hi);
-         vm := (dp/hp);
+         mb := (mt1-mi);
+
+         se mb < 0 então
+           mb := (mb * -1);
+         fim-se
+         mpt := (mb / 60);
+         tempo := (mpt + hp);
+         vm := (dp/tempo);
          prec1 := (odometro-qt1);
          previsao   := (prec1/vm);
 
+         y := (previsao *60);
 
-         vi := (mt1 - mi);
-         se vi < 0 então
-           vi := vi * -1;
-         fim-se 
+         horadeconversao := 0;
+         
+         enquanto y > 59 faça
+           horadeconversao := horadeconversao +1;
+           y := y -60;
+         fim-enquanto
 
-         imprima ("Previsao de chegada ao seu destino: ", previsao, "h" , vi, "m" );
+         se horadeconversao + y = 0 então
+           imprima ("Você chegou ao seu destino, por favor digite 1 na proxima pergunta");
+         fim-se
+
+         imprima ("Previsao de chegada ao seu destino: ", horadeconversao, "h" , y , "m" );
 
          qi:=qt1;
          hi:=ht1;
