@@ -79,7 +79,9 @@ início
          prec1 := (dt-dp);
          previsao   := (prec1/vm);
          imprima ("Previsao de chegada ao seu destino: ", previsao, "horas");
-
+        se (previsao = 0 ) então
+           imprima ("Você chegou ao seu destino!");
+        fim-se
 
 /*Inicio do loop*/
 
