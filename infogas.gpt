@@ -1,29 +1,202 @@
-algoritmo_infogas
-
-************* TRABALHAR NO ARQUIVO ESQUELETO.GPT, SÓ IREMOS MUDAR PARA O INFOGAS02.GPT NO FINAL DO TRABALHO.**************
-
+algoritmo infogas02;
 variáveis
-    hi : inteiro;
-    h : real;
-    mi : inteiro;
-    m : real;
-    oi : real;
-    ha : inteiro;
-    ma : inteiro;
-    oa : real;
-    pvd : real;
-    d : real;
-    vlp : real;
-    vmt : real;
-    cp : real;
-    dt : real;
-    tt : real;
-    /* sendo t=tanque, hi=hora inicial, mi=minuto inicial, oi= odomentro inicial, ha=hora atual, ma=minuto atual, oa= odometro atual, d=distancia, dt=distancia total, vlp=velocidade parcial, vmt=velocidade media total, tt= quantidade restante de gasolina no tanque de combustível, cp=consumo de combustivel parcial, pvd= previsao de chegada */
+    hi  : real; /*hora inicial*/
+    ht1 : real; /*hora na primeira parada*/
 
-fim-varáveis
+    mi : real; /*minuto inicial*/
+    mt1 : real; /*minuto na primeira parada*/
+
+    qi : real; /*odometro inicial*/
+    qt1 : real; /*odometro na primeira parada*/
+
+    gt1 : real; /*gasolina na primeira parada*/
+    gt : real; /*gasolina parada 2 em diante*/
+
+    dp : real; /*distancia percorrida*/
+    hp : real; /*hora percorrida*/
+    mb : real; /*minutos percorridos*/
+    mpt : real; /*minutos transformados em hora*/
+    vm : real; /*velocidade media*/
+    vmt : real; /*velocidade media total*/
+    cc : real; /*consumo de combustivel*/
+    dt : real; /*distancia total*/
+    tt : real; /*tempo total do percurso*/
+    tp : real; /*soma das horas com os minutos*/
+    cc1 : real; /*calculo para consumo de combustivel*/
+    prec1 : real; /*calculo da previsao*/
+    previsao : real; /*previsao de chegada*/
+    parada : real; /*parada do loop*/
+    variacaominuto : real;
+    htotal : real; /*hora pra vmt*/
+    cct : real; /*consumo de combustivel total para calculo do ccht*/
+    ccht : real; /*consumo de combustivel total em km/l do relatorio*/
+    odometro : real; /*calculo do odometro final menos inicial para calculo de previsao*/
+    y : inteiro; /*conversão minutos*/
+    horadeconversao : inteiro;
+    mp : real;
+    mh : real;
+    tempo : real;
+fim-variáveis
 
 início
+
+
+/*Saída*/
+
+
+
+        imprima ("\nOlá viajante\n\nSomos o aplicativo trip e iremos lhe auxiliar nesta sua viajem!\n");
+        imprima ("\nInforme a hora da sua saida:\n");
+         hi:= leia();
+         imprima ("\nInforme os minutos da sua saida:\n");
+         mi:= leia();
+         imprima ("\nInforme a quilometragem inicial, do seu odômetro:\n");
+         qi:= leia();
+         imprima ("\nInforme a distância total da viagem:\n");
+         dt:= leia();
+
+         htotal := hi;
+/*Primeiro abastecimento*/
+         imprima ("\nVamos ao seu primeiro abastecimento!\n");
+
+         imprima ("\nInforme a hora do seu primeiro abastecimento:\n");
+         ht1:=leia();
+         imprima ("\nInforme os minutos do seu primeiro abastecimento:\n");
+         mt1:=leia();
+         imprima ("\nInforme marca o seu odometro na primeira parada :\n");
+         qt1:=leia();
+         imprima ("\nInforme quantos litros de gasolina foram abastecidos nesta parada:\n");
+         gt1:=leia();
+         imprima ("\nRelátorio parcial:\n");
+         dp := (qt1-qi);
+         hp := (ht1-hi);
+         mp := (mt1-mi);
+         mh := (mp/60);
+         tp := (hp+mh);
+         vm := (dp/tp);
+         imprima ("\nA sua velocidade média neste trecho foi:\n ",vm, "km/h");
+         cc := (dp/gt1);
+         imprima ("\nO seu consumo combustível neste trecho foi de:\n ",cc, "km/l");
+
+
+/*Inico do calculo de conversão de horas e minutos*/
+
+         dp := (qt1-qi);
+         hp := (ht1-hi);
+         mb := (mt1-mi);
+
+         se mb < 0 então
+           mb := (mb * -1);
+         fim-se
+         
+         mpt := (mb / 60);
+         tempo := (mpt + hp);
+         vm := (dp/tempo);
+         prec1 := (dt-dp);
+         odometro := (dt+qi);
+         previsao   := (prec1/vm);
+
+         y := (previsao *60);
+
+
+         enquanto y > 59 faça
+           horadeconversao := horadeconversao +1;
+           y := (y -60);
+         fim-enquanto
+        
+         se horadeconversao + y = 0 então 
+            imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
+         fim-se
+
+
+         imprima ("\nVocê chegará ao seu destino em:\n ",horadeconversao, "h" , y , "m");
+ 
+/*Inicio do loop*/
+
+
+         cct := cct + gt1; 
+
+         imprima ("\nEssa será sua ultima parada? Se sim digite 1, se não digite 2\n");
+         parada := leia ();
+         qi:=qt1;
+         hi:=ht1;
+         mi:=mt1;
+
+         enquanto parada = 2 faça
+
+         imprima ("\nDigite a hora do seu abastecimento:\n");
+         ht1:=leia();
+         imprima ("\nDigite os minutos do seu abastecimento:\n");
+         mt1:=leia();
+         imprima ("\Quanto marca o seu odometro :\n");
+         qt1:=leia();  
+         imprima ("\nDigite quantos litros de gasolina foram abastecidos nesta parada:\n");
+         gt1:=leia();
+                 
+         cct := cct + gt1;       
+/*Inicio do calculo da velocidade media*/
+
+         variacaominuto:=mt1-mi; 
+ 
+         vm:=(qt1-qi)/((variacaominuto/60)+ht1-hi);
+
+         imprima ("\nRelátorio Parcial:\n");
+
+         imprima ("\nA sua velocidade média foi: ", vm, "km/h\n");
+
+/*Inicio do calculo do consumo de combustivel*/
+             
        
-       impima ("NOTA:escreva as horas e minutos em decimais, ex: 1:30min = 1,5h");
-       imprima ("Digite a hora");
+         cc:=(qt1-qi)/gt1;
+         imprima ("\nO seu consumo combustivel foi de:\n ", cc, "km/l");
+
+         dp := (qt1-qi);
+         hp := (ht1-hi);
+         mb := (mt1-mi);
+
+         se mb < 0 então
+           mb := (mb * -1);
+         fim-se
+         mpt := (mb / 60);
+         tempo := (mpt + hp);
+         vm := (dp/tempo);
+         prec1 := (odometro-qt1);
+         previsao   := (prec1/vm);
+
+         y := (previsao *60);
+
+         horadeconversao := 0;
+         
+         enquanto y > 59 faça
+           horadeconversao := horadeconversao +1;
+           y := y -60;
+         fim-enquanto
+
+         se horadeconversao + y = 0 então
+           imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
+         fim-se
+
+         imprima ("\nVocê chegará ao seu destino em:\n ", horadeconversao, "h" , y , "m" );
+
+         qi:=qt1;
+         hi:=ht1;
+         mi:=mt1;
+        
+        imprima ("\nEssa será sua ultima parada? Se sim digite 1, se não digite 2\n");
+         parada := leia(); 
+    
+     fim-enquanto
+
+/*Após acabado o loop, imprimirá o relatorio final abaixo*/
+
+
+
+  imprima ("Relatório final da viagem:");
+        
+         ccht := dt/cct;
+         imprima ("Seu consumo de combustível total foi de: ", ccht, "km/l");
+         vmt := dt/(ht1-htotal);
+         imprima ("Velocidade média total: ", vmt, "km/h");
+
+
 fim
