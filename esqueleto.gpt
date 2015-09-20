@@ -30,6 +30,8 @@ variáveis
     htotal : real; /*hora pra vmt*/
     cct : real; /*consumo de combustivel total para calculo do ccht*/
     ccht : real; /*consumo de combustivel total em km/l do relatorio*/
+    odometro : real; /*calculo do odometro final menos inicial para calculo de previsao*/
+    vi : real; 
 
 fim-variáveis
 
@@ -40,7 +42,8 @@ início
 
 
 
-         imprima ("Digite a hora de saida:");
+        imprima ("\nOlá viajante\n\nSomos o aplicativo camelo e iremos lhe ajudar nesta sua viajem!");
+        imprima ("Digite a hora de saida:");
          hi:= leia();
          imprima ("Digite os minutos de saida:");
          mi:= leia();
@@ -51,7 +54,7 @@ início
 
          htotal := hi;
 /*Primeiro abastecimento*/
-
+         imprima ("\nVamos ao seu primeiro abastecimento!\n");
 
          imprima ("Digite a hora do seu primeiro abastecimento:");
          ht1:=leia();
@@ -67,20 +70,29 @@ início
          mh := (mp/60);
          tp := (hp+mh);
          vm := (dp/tp);
-         imprima ("A sua velocidade média foi: ", vm, "km/h");
+         imprima ("\nA sua velocidade média foi:\n ",vm, "km/h");
          cc := (dp/gt1);
-         imprima ("O seu consumo combustivel foi de: ", cc, "km/l");
+         imprima ("\nO seu consumo combustivel foi de:\n ",cc, "km/l");
+
          dp := (qt1-qi);
          hp := (ht1-hi);
-         mp := (mt1-mi);
-         mh := (mp/60);
-         tp := (hp+mh);
-         vm := (dp/tp);
+         vm := (dp/hp);
          prec1 := (dt-dp);
+         odometro := (dt+qi);
          previsao   := (prec1/vm);
-         imprima ("Previsao de chegada ao seu destino: ", previsao, "horas");
-        se (previsao = 0 ) então
-           imprima ("Você chegou ao seu destino!");
+
+ 
+         vi := (mt1 - mi);
+           se vi < 0 então
+           vi := vi * -1;
+         fim-se
+
+
+
+
+         imprima ("\nPrevisao de chegada ao seu destino:\n ",previsao, "h" , vi , "m");
+        se previsao = 0
+           imprima ("Você chegou ao seu destino, por favor digite 1 na proxima pergunta!");
         fim-se
 
 /*Inicio do loop*/
@@ -124,14 +136,17 @@ início
 
          dp := (qt1-qi);
          hp := (ht1-hi);
-         mp := (mt1-mi);
-         mh := (mp/60);
-         tp := (hp+mh);
-         vm := (dp/tp);
-          
-         prec1 := (dt-qt1);
+         vm := (dp/hp);
+         prec1 := (odometro-qt1);
          previsao   := (prec1/vm);
-         imprima ("Previsao de chegada ao seu destino: ", previsao, "horas");
+
+
+         vi := (mt1 - mi);
+         se vi < 0 então
+           vi := vi * -1;
+         fim-se 
+
+         imprima ("Previsao de chegada ao seu destino: ", previsao, "h" , vi, "m" );
 
          qi:=qt1;
          hi:=ht1;
@@ -148,10 +163,11 @@ início
 
   imprima ("Relatorio final do percurso");
         
-
+         imprima (vi);
          ccht := dt/cct;
          imprima ("Seu consumo de combustivel total foi de: ", ccht, "km/l");
          vmt := dt/(ht1-htotal);
          imprima ("Velocidade média total: ", vmt, "km/h");
-      
+
+
 fim
