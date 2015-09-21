@@ -50,9 +50,9 @@ início
          hi:= leia();
          imprima ("\nInforme os minutos da sua saida:\n");
          mi:= leia();
-         imprima ("\nInforme a quilometragem inicial, do seu odômetro:\n");
+         imprima ("\nInforme a quilometragem inicial, do seu odômetro em km:\n");
          qi:= leia();
-         imprima ("\nInforme a distância total da viagem:\n");
+         imprima ("\nInforme a distância total da viagem em km:\n");
          dt:= leia();
 
          htotal := hi;
@@ -63,7 +63,7 @@ início
          ht1:=leia();
          imprima ("\nInforme os minutos do seu primeiro abastecimento:\n");
          mt1:=leia();
-         imprima ("\nInforme quanto marca o seu odometro na primeira parada :\n");
+         imprima ("\nInforme quanto marca o seu odometro na primeira parada em km:\n");
          qt1:=leia();
          imprima ("\nInforme quantos litros de gasolina foram abastecidos nesta parada:\n");
          gt1:=leia();
@@ -128,7 +128,7 @@ início
          ht1:=leia();
          imprima ("\nDigite os minutos do seu abastecimento:\n");
          mt1:=leia();
-         imprima ("\Quanto marca o seu odometro :\n");
+         imprima ("\Quanto marca o seu odometro em km :\n");
          qt1:=leia();  
          imprima ("\nDigite quantos litros de gasolina foram abastecidos nesta parada:\n");
          gt1:=leia();
