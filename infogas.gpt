@@ -45,129 +45,128 @@ início
 
 
 
-        imprima ("\nOlá viajante\n\nSomos o aplicativo trip e iremos lhe auxiliar nesta sua viajem!\n");
-        imprima ("\nInforme a hora da sua saida:\n");
-         hi:= leia();
-         imprima ("\nInforme os minutos da sua saida:\n");
-         mi:= leia();
-         imprima ("\nInforme a quilometragem inicial, do seu odômetro em km:\n");
-         qi:= leia();
-         imprima ("\nInforme a distância total da viagem em km:\n");
-         dt:= leia();
+    imprima ("\nOlá viajante\n\nSomos o aplicativo trip e iremos lhe auxiliar nesta sua viajem!\n");
+    imprima ("\nInforme a hora da sua saida:\n");
+    hi:= leia();
+    imprima ("\nInforme os minutos da sua saida:\n");
+    mi:= leia();
+    imprima ("\nInforme a quilometragem inicial, do seu odômetro em km:\n");
+    qi:= leia();
+    imprima ("\nInforme a distância total da viagem em km:\n");
+    dt:= leia();
 
-         se hi < 0 então
-          imprima (" ATENCAO: A HORA SERA CONVERTIDA PARA POSITIVO!");
-          hi := hi *(-1);
-         fim-se
+    se hi < 0 então
+        imprima (" ATENCAO: A HORA SERA CONVERTIDA PARA POSITIVO!"); 
+        hi := hi *(-1);
+    fim-se
 
-         se mi < 0 então
-           imprima (" ATENCAO: O MINUTO SERA CONVERTIDO PARA POSITIVO!");
-           mi := mi *(-1);
-         fim-se
+    se mi < 0 então
+        imprima (" ATENCAO: O MINUTO SERA CONVERTIDO PARA POSITIVO!");
+        mi := mi *(-1);
+    fim-se
 
-         se qi < 0 então
-          imprima (" ATENCAO: O ODOMETRO SERA CONVERTIDO PARA POSITIVO!");
-          qi := qi *(-1);
-         fim-se
+    se qi < 0 então
+        imprima (" ATENCAO: O ODOMETRO SERA CONVERTIDO PARA POSITIVO!");
+        qi := qi *(-1);
+    fim-se
 
-        se dt < 0 então
-          imprima (" ATENCAO: O DISTANCIA SERA CONVERTIDA PARA POSITIVO!");
-          dt := dt *(-1);
-        fim-se
-
-
+    se dt < 0 então
+        imprima (" ATENCAO: O DISTANCIA SERA CONVERTIDA PARA POSITIVO!");
+        dt := dt *(-1);
+    fim-se
 
 
-         htotal := hi;
+
+
+     htotal := hi;
 /*Primeiro abastecimento*/
-         imprima ("\nVamos ao seu primeiro abastecimento!\n");
+     imprima ("\nVamos ao seu primeiro abastecimento!\n");
 
-         imprima ("\nInforme a hora do seu primeiro abastecimento:\n");
-         ht1:=leia();
-         imprima ("\nInforme os minutos do seu primeiro abastecimento:\n");
-         mt1:=leia();
-         imprima ("\nInforme quanto marca o seu odometro na primeira parada em km:\n");
-         qt1:=leia();
-         imprima ("\nInforme quantos litros de gasolina foram abastecidos nesta parada:\n");
-         gt1:=leia();
-         imprima ("\nRelátorio parcial:\n");
+     imprima ("\nInforme a hora do seu primeiro abastecimento:\n");
+     ht1:=leia();
+     imprima ("\nInforme os minutos do seu primeiro abastecimento:\n");
+     mt1:=leia();
+     imprima ("\nInforme quanto marca o seu odometro na primeira parada em km:\n");
+     qt1:=leia();
+     imprima ("\nInforme quantos litros de gasolina foram abastecidos nesta parada:\n");
+     gt1:=leia();
+     imprima ("\nRelátorio parcial:\n");
 
-         se ht1 < 0 então
-          imprima (" ATENCAO: A HORA SERA CONVERTIDA PARA POSITIVO!");
-          ht1 := ht1 *(-1);
-         fim-se
+     se ht1 < 0 então
+         imprima (" ATENCAO: A HORA SERA CONVERTIDA PARA POSITIVO!");
+         ht1 := ht1 *(-1);
+     fim-se
 
 
-         se mt1 < 0 então
-          imprima (" ATENCAO: O MINUTO SERA CONVERTIDO PARA POSITIVO!");
-          mt1 := mt1 *(-1);
-         fim-se
+     se mt1 < 0 então
+         imprima (" ATENCAO: O MINUTO SERA CONVERTIDO PARA POSITIVO!");
+         mt1 := mt1 *(-1);
+     fim-se
 
-         se qt1 < 0 então
-           imprima (" ATENCAO: O ODOMETRO SERA CONVERTIDO PARA POSITIVO!");
-           qt1 := qt1 *(-1);
-         fim-se
+     se qt1 < 0 então
+          imprima (" ATENCAO: O ODOMETRO SERA CONVERTIDO PARA POSITIVO!");
+          qt1 := qt1 *(-1);
+     fim-se
 
-          se gt1 < 0 então
-           imprima (" ATENCAO: O COMBUSTIVEL SERA CONVERTIDO PARA POSITIVO!");
-           gt1 := gt1 *(-1);
-          fim-se
+     se gt1 < 0 então
+          imprima (" ATENCAO: O COMBUSTIVEL SERA CONVERTIDO PARA POSITIVO!");
+          gt1 := gt1 *(-1);
+     fim-se
 
-         dp := (qt1-qi);
-         hp := (ht1-hi);
-         mp := (mt1-mi);
-         mh := (mp/60);
-         tp := (hp+mh);
-         vm := (dp/tp);
-         imprima ("\nA sua velocidade média neste trecho foi:\n ",vm, "km/h");
-         cc := (dp/gt1);
-         imprima ("\nO seu consumo combustível neste trecho foi de:\n ",cc, "km/l");
+     dp := (qt1-qi);
+     hp := (ht1-hi);
+     mp := (mt1-mi);
+     mh := (mp/60);
+     tp := (hp+mh);
+     vm := (dp/tp);
+     imprima ("\nA sua velocidade média neste trecho foi:\n ",vm, "km/h");
+     cc := (dp/gt1);
+     imprima ("\nO seu consumo combustível neste trecho foi de:\n ",cc, "km/l");
 
 
 /*Inico do calculo de conversão de horas e minutos*/
 
-         dp := (qt1-qi);
-         hp := (ht1-hi);
-         mb := (mt1-mi);
+     dp := (qt1-qi);
+     hp := (ht1-hi);
+     mb := (mt1-mi);
 
-         se mb < 0 então
-           mb := (mb * -1);
-         fim-se
+     se mb < 0 então
+         mb := (mb * -1);
+     fim-se
          
-         mpt := (mb / 60);
-         tempo := (mpt + hp);
-         vm := (dp/tempo);
-         prec1 := (dt-dp);
-         odometro := (dt+qi);
-         previsao   := (prec1/vm);
+     mpt := (mb / 60);
+     tempo := (mpt + hp);
+     vm := (dp/tempo);
+     prec1 := (dt-dp);
+     odometro := (dt+qi);
+     previsao   := (prec1/vm);
 
-         y := (previsao *60);
+     y := (previsao *60);
 
-
-         enquanto y > 59 faça
-           horadeconversao := horadeconversao +1;
-           y := (y -60);
-         fim-enquanto
+     enquanto y > 59 faça
+         horadeconversao := horadeconversao +1;
+         y := (y -60);
+     fim-enquanto
         
-         imprima ("\nDe acordo com a sua velocidade média, você chegará ao seu destino em:\n ",horadeconversao, "h" , y , "m");
+     imprima ("\nDe acordo com a sua velocidade média, você chegará ao seu destino em:\n ",horadeconversao, "h" , y , "m");
   
-         se horadeconversao + y = 0 então
-           imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
-         fim-se
+     se horadeconversao + y = 0 então
+          imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
+     fim-se
 
 
 /*Inicio do loop*/
 
 
-         cct := cct + gt1; 
+     cct := cct + gt1; 
 
-         imprima ("\nEssa será sua ultima parada? Se sim digite 1, se não digite 2\n");
-         parada := leia ();
-         qi:=qt1;
-         hi:=ht1;
-         mi:=mt1;
+     imprima ("\nEssa será sua ultima parada? Se sim digite 1, se não digite 2\n");
+     parada := leia ();
+     qi:=qt1;
+     hi:=ht1;
+     mi:=mt1;
 
-         enquanto parada = 2 faça
+     enquanto parada = 2 faça
 
          imprima ("\nDigite a hora do seu abastecimento:\n");
          ht1:=leia();
@@ -180,26 +179,26 @@ início
                  
          cct := cct + gt1;       
 
-        se ht1 < 0 então
-           imprima (" ATENCAO: A HORA SERA CONVERTIDA PARA POSITIVO!");
-           ht1 := ht1 *(-1);
-        fim-se
+         se ht1 < 0 então
+             imprima (" ATENCAO: A HORA SERA CONVERTIDA PARA POSITIVO!");
+             ht1 := ht1 *(-1);
+         fim-se
 
 
-        se mt1 < 0 então
-          imprima (" ATENCAO: O MINUTO SERA CONVERTIDO PARA POSITIVO!");
-          mt1 := mt1 *(-1);
-        fim-se
+         se mt1 < 0 então
+             imprima (" ATENCAO: O MINUTO SERA CONVERTIDO PARA POSITIVO!");
+             mt1 := mt1 *(-1);
+         fim-se
 
-        se qt1 < 0 então
-           imprima (" ATENCAO: O ODOMETRO SERA CONVERTIDO PARA POSITIVO!");
-           qt1 := qt1 *(-1);
-        fim-se
+         se qt1 < 0 então
+             imprima (" ATENCAO: O ODOMETRO SERA CONVERTIDO PARA POSITIVO!");
+             qt1 := qt1 *(-1);
+         fim-se
 
-        se gt1 < 0 então
-          imprima (" ATENCAO: O COMBUSTIVEL SERA CONVERTIDO PARA POSITIVO!");
-          gt1 := gt1 *(-1);
-        fim-se
+         se gt1 < 0 então
+             imprima (" ATENCAO: O COMBUSTIVEL SERA CONVERTIDO PARA POSITIVO!");
+             gt1 := gt1 *(-1);
+         fim-se
 
 
 /*Inicio do calculo da velocidade media*/
@@ -223,7 +222,7 @@ início
          mb := (mt1-mi);
 
          se mb < 0 então
-           mb := (mb * -1);
+             mb := (mb * -1);
          fim-se
          mpt := (mb / 60);
          tempo := (mpt + hp);
@@ -236,15 +235,16 @@ início
          horadeconversao := 0;
          
          enquanto y > 59 faça
-           horadeconversao := horadeconversao +1;
-           y := y -60;
+             horadeconversao := horadeconversao +1;
+             y := y -60;
+     
          fim-enquanto
 
-       
+
          imprima ("\nDe acordo com a sua velocidade média você chegará ao seu destino em:\n ", horadeconversao, "h" , y , "m" );
 
          se horadeconversao + y = 0 então
-           imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
+             imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
          fim-se
 
 
@@ -252,7 +252,7 @@ início
          hi:=ht1;
          mi:=mt1;
         
-        imprima ("\nEssa será sua ultima parada? Se sim digite 1, se não digite 2\n");
+         imprima ("\nEssa será sua ultima parada? Se sim digite 1, se não digite 2\n");
          parada := leia(); 
     
      fim-enquanto
@@ -261,12 +261,11 @@ início
 
 
 
-  imprima ("Relatório final da viagem:");
+     imprima ("Relatório final da viagem:");
         
-         ccht := dt/cct;
-         imprima ("Seu consumo de combustível total foi de: ", ccht, "km/l");
-         vmt := dt/(ht1-htotal);
-         imprima ("Velocidade média total: ", vmt, "km/h");
-
+     ccht := dt/cct;
+     imprima ("Seu consumo de combustível total foi de: ", ccht, "km/l");
+     vmt := dt/(ht1-htotal);
+     imprima ("Velocidade média total: ", vmt, "km/h");
 
 fim
