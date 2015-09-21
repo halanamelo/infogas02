@@ -55,6 +55,29 @@ início
          imprima ("\nInforme a distância total da viagem em km:\n");
          dt:= leia();
 
+         se hi < 0 então
+          imprima (" ATENCAO: A HORA SERA CONVERTIDA PARA POSITIVO!");
+          hi := hi *(-1);
+         fim-se
+
+         se mi < 0 então
+           imprima (" ATENCAO: O MINUTO SERA CONVERTIDO PARA POSITIVO!");
+           mi := mi *(-1);
+         fim-se
+
+         se qi < 0 então
+          imprima (" ATENCAO: O ODOMETRO SERA CONVERTIDO PARA POSITIVO!");
+          qi := qi *(-1);
+         fim-se
+
+        se dt < 0 então
+          imprima (" ATENCAO: O DISTANCIA SERA CONVERTIDA PARA POSITIVO!");
+          dt := dt *(-1);
+        fim-se
+
+
+
+
          htotal := hi;
 /*Primeiro abastecimento*/
          imprima ("\nVamos ao seu primeiro abastecimento!\n");
@@ -68,6 +91,28 @@ início
          imprima ("\nInforme quantos litros de gasolina foram abastecidos nesta parada:\n");
          gt1:=leia();
          imprima ("\nRelátorio parcial:\n");
+
+         se ht1 < 0 então
+          imprima (" ATENCAO: A HORA SERA CONVERTIDA PARA POSITIVO!");
+          ht1 := ht1 *(-1);
+         fim-se
+
+
+         se mt1 < 0 então
+          imprima (" ATENCAO: O MINUTO SERA CONVERTIDO PARA POSITIVO!");
+          mt1 := mt1 *(-1);
+         fim-se
+
+         se qt1 < 0 então
+           imprima (" ATENCAO: O ODOMETRO SERA CONVERTIDO PARA POSITIVO!");
+           qt1 := qt1 *(-1);
+         fim-se
+
+          se gt1 < 0 então
+           imprima (" ATENCAO: O COMBUSTIVEL SERA CONVERTIDO PARA POSITIVO!");
+           gt1 := gt1 *(-1);
+          fim-se
+
          dp := (qt1-qi);
          hp := (ht1-hi);
          mp := (mt1-mi);
@@ -134,6 +179,29 @@ início
          gt1:=leia();
                  
          cct := cct + gt1;       
+
+        se ht1 < 0 então
+           imprima (" ATENCAO: A HORA SERA CONVERTIDA PARA POSITIVO!");
+           ht1 := ht1 *(-1);
+        fim-se
+
+
+        se mt1 < 0 então
+          imprima (" ATENCAO: O MINUTO SERA CONVERTIDO PARA POSITIVO!");
+          mt1 := mt1 *(-1);
+        fim-se
+
+        se qt1 < 0 então
+           imprima (" ATENCAO: O ODOMETRO SERA CONVERTIDO PARA POSITIVO!");
+           qt1 := qt1 *(-1);
+        fim-se
+
+        se gt1 < 0 então
+          imprima (" ATENCAO: O COMBUSTIVEL SERA CONVERTIDO PARA POSITIVO!");
+          gt1 := gt1 *(-1);
+        fim-se
+
+
 /*Inicio do calculo da velocidade media*/
 
          variacaominuto:=mt1-mi; 
