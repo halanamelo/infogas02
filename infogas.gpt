@@ -63,7 +63,7 @@ início
          ht1:=leia();
          imprima ("\nInforme os minutos do seu primeiro abastecimento:\n");
          mt1:=leia();
-         imprima ("\nInforme marca o seu odometro na primeira parada :\n");
+         imprima ("\nInforme quanto marca o seu odometro na primeira parada :\n");
          qt1:=leia();
          imprima ("\nInforme quantos litros de gasolina foram abastecidos nesta parada:\n");
          gt1:=leia();
@@ -109,7 +109,7 @@ início
          fim-se
 
 
-         imprima ("\nVocê chegará ao seu destino em:\n ",horadeconversao, "h" , y , "m");
+         imprima ("\nDe acordo com a sua velocidade média, você chegará ao seu destino em:\n ",horadeconversao, "h" , y , "m");
  
 /*Inicio do loop*/
 
@@ -176,7 +176,7 @@ início
            imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
          fim-se
 
-         imprima ("\nVocê chegará ao seu destino em:\n ", horadeconversao, "h" , y , "m" );
+         imprima ("\nDe acordo com a sua velocidade média você chegará ao seu destino em:\n ", horadeconversao, "h" , y , "m" );
 
          qi:=qt1;
          hi:=ht1;
