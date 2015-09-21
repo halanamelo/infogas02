@@ -46,6 +46,12 @@ início
 
 
     imprima ("\nOlá viajante\n\nSomos o aplicativo trip e iremos lhe auxiliar nesta sua viajem!\n");
+    imprima ("INSTRUÇÕES"); 
+    imprima ("Considere que a viagem será realizada dentro de um dia, ou seja, não ultrapassará 24 hrs.");
+    imprima (" Considere que o carro inicia a viagem com o tanque abastecido e a cada parada para abastecimento ele complete o tanque.");
+    imprima (" Digite primeiramente a hora, e depois os minutos separadamente.");
+
+
     imprima ("\nInforme a hora da sua saida:\n");
     hi:= leia();
     imprima ("\nInforme os minutos da sua saida:\n");
