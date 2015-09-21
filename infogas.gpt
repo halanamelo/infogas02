@@ -104,13 +104,13 @@ início
            y := (y -60);
          fim-enquanto
         
-         se horadeconversao + y = 0 então 
-            imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
+         imprima ("\nDe acordo com a sua velocidade média, você chegará ao seu destino em:\n ",horadeconversao, "h" , y , "m");
+  
+         se horadeconversao + y = 0 então
+           imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
          fim-se
 
 
-         imprima ("\nDe acordo com a sua velocidade média, você chegará ao seu destino em:\n ",horadeconversao, "h" , y , "m");
- 
 /*Inicio do loop*/
 
 
@@ -172,11 +172,13 @@ início
            y := y -60;
          fim-enquanto
 
+       
+         imprima ("\nDe acordo com a sua velocidade média você chegará ao seu destino em:\n ", horadeconversao, "h" , y , "m" );
+
          se horadeconversao + y = 0 então
            imprima ("\nVocê chegou ao seu destino, por favor digite 1 na proxima pergunta\n");
          fim-se
 
-         imprima ("\nDe acordo com a sua velocidade média você chegará ao seu destino em:\n ", horadeconversao, "h" , y , "m" );
 
          qi:=qt1;
          hi:=ht1;
